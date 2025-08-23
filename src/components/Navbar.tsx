@@ -22,7 +22,7 @@ export function Navbar() {
     <header>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 shadow-md ${
-          isScrolled ? "bg-[#d9ff00d9]" : "bg-transparent"
+          isScrolled ? "bg-[#d9ff00d9]" : "bg-grey"
         }`}
       >
         <div className="max-w-full mx-auto px-6 sm:px-8">

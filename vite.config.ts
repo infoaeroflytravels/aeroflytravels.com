@@ -7,8 +7,12 @@ const copyStaticFiles = () => {
   return {
     name: 'copy-static-files',
     closeBundle() {
-      copyFileSync(resolve(__dirname, 'sitemap.xml'), resolve(__dirname, 'dist/sitemap.xml'));
-      copyFileSync(resolve(__dirname, 'robots.txt'), resolve(__dirname, 'dist/robots.txt'));
+      try {
+        copyFileSync(resolve(__dirname, 'sitemap.xml'), resolve(__dirname, 'dist/sitemap.xml'));
+        copyFileSync(resolve(__dirname, 'robots.txt'), resolve(__dirname, 'dist/robots.txt'));
+      } catch (err) {
+        console.warn("⚠️ Skipping static files copy (not found)", err.message);
+      }
     }
   };
 };
@@ -20,10 +24,13 @@ export default defineConfig({
     outDir: "dist",
   },
   server: {
-    middlewareMode: false,
-    historyApiFallback: true,
-    host: true, // allows access from other devices
-    port: 5173, // optional, choose your port
-  },
-  },
-);
+    host: true, // expose to LAN
+    port: 5173,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      '192.168.1.34',      // your LAN device
+      '.ngrok-free.app',   // allow any ngrok tunnel
+    ]
+  }
+});

@@ -2,23 +2,23 @@ import Heroo from "../assets/images/home.jpg";
 
 export function Hero() {
   const handleScroll = () => {
-    const section = document.getElementById("tour-packages");
+    const section = document.getElementById("/packages");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* ✅ Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center w-full h-full"
-        style={{ backgroundImage: `url(${Heroo})` }}
-        role="img"
-        aria-label="Travel background"
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
+      <img
+        src={Heroo}
+        alt="Travel with Aerofly"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        fetchPriority="high"
+      />
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* ✅ Content Section */}
       <div className="relative text-center px-4 sm:px-6 md:px-10 lg:px-16">

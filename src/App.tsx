@@ -22,7 +22,7 @@ import SchemaMarkup from "./SchemaMarkup";
 import Loader from "./components/loader"; // ✅ Loader Component
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Simulate a loading delay

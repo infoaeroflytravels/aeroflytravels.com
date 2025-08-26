@@ -58,12 +58,13 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Weekend Trips</h3>
             <ul className="space-y-2 text-base">
+              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vrindavan</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Agra</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">KhatuShyam</Link></li>
               <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Chopta Tungnath</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Manali Sissu</Link></li>
               <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Manali Sissu Kasol</Link></li>
               <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Jibhi & Tirthan Valley</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kasol Kheerganga</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Mcleodganj Triund</Link></li>
+            
             </ul>
           </div>
           {/* International Trips*/}

@@ -1,9 +1,20 @@
+
+
 import { useState } from "react";
 import thailand from "../assets/img/thailand.jpg";
 import galleryBg from "../assets/images/gallary.jpg";
+import manali2 from "../assets/trips/manali 2.png";
+import jibhi2 from "../assets/trips/jibhi2.png";
+import chopta2 from "../assets/trips/chopta2.png";
+import kantal2 from "../assets/trips/kantal2.png";
+import yulla2 from "../assets/trips/yulla2.png";
+import kedarnath2 from "../assets/trips/kedarnath2.png";
+import auli2 from "../assets/trips/auli2.png";
+
+
 
 const Gallery = () => {
-  const images = [thailand, thailand, thailand]; // Replace with actual image URLs
+  const images = [ thailand, thailand, thailand, manali2, jibhi2, chopta2, kantal2, yulla2, auli2, kedarnath2, thailand, thailand,thailand, thailand, ]; // Replace with actual image URLs
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
@@ -51,8 +62,9 @@ const Gallery = () => {
       </div>
       
       {/* Gallery Section */}
-      <div className="max-w-6xl mx-auto py-10 md:py-16 px-4">
-        <div className="columns-2 sm:columns-3 gap-4 space-y-4">
+      <div className="relative w-full max-h-screen">
+      <div className="max-w-5xl mx-10 py-10 md:py-16 px-4">
+        <div className="columns-4 sm:columns-5 gap-4 space-y-4">
           {images.map((image, index) => (
             <img
               key={index}
@@ -105,7 +117,9 @@ const Gallery = () => {
         </div>
       )}
     </div>
+
+    </div>
   );
 };
-
 export default Gallery;
+

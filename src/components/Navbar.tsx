@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoo from "../assets/img/LOGO12.png";
 import aero from "../assets/img/aero.png";
+import Gallery from "../pages/gallery";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -106,6 +107,15 @@ export function Navbar() {
                   style={{ color: navTextColor }}
                 >
                   About
+                </Link>
+              </li>
+              <li> 
+                <Link
+                  to= "/gallery/"
+                  className="px-4 py-2 font-semibold transition-colors"
+                  style={{ color: navTextColor }}
+                >
+                  Gallery
                 </Link>
               </li>
               <li>

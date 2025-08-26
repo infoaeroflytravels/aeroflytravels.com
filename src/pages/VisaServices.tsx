@@ -2,21 +2,27 @@ import React, { useEffect } from "react";
 import { Globe, FileCheck, Clock, DollarSign } from "lucide-react";
 import visa from "../assets/images/visa.jpg";
 import ae from "../assets/trips/AE.webp";
-
+import tr from "../assets/visa/GR.png";
+import sg from "../assets/visa/HK.webp";
+import de from "../assets/visa/HK.webp";
+import hk from "../assets/visa/HK.webp";
+import sa from "../assets/visa/JP.png";
+import qa from "../assets/visa/JP.png";
 import th from "../assets/visa/Thailand.avif";
 import ch from "../assets/visa/switzerland.webp";
-import us from "../assets/visa/US.webp"; 
+import us from "../assets/visa/US.webp";
 import uk from "../assets/visa/GB.webp";
-import ca from "../assets/visa/CA.png"; 
+import ca from "../assets/visa/CA.png";
 import au from "../assets/visa/AU.png";
 import fr from "../assets/visa/FR.webp";
-import gr from "../assets/visa/GR.png";
 import it from "../assets/visa/IT.png";
 import om from "../assets/visa/OM.webp";
 import jp from "../assets/visa/JP.png";
-import HK from "../assets/visa/HK.webp";
 import kr from "../assets/visa/KR.png";
 import my from "../assets/visa/MY.webp";
+import nl from "../assets/visa/EG.webp";
+import za from "../assets/visa/ES.png";
+
 
 
 export function VisaServices() {
@@ -177,118 +183,158 @@ export function VisaServices() {
     </h2>
 
     <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-5 gap-6">
-        {[
-          {
-        title: "United Arab Emirates",
-        image: ae,
-        visaCount: "53K",
-        date: "27 Aug, 07:21 AM",
-        link: "#",
-          },
-          {
-        title: "Thailand",
-        image: th,
-        visaCount: "32K",
-        date: "23 Aug, 02:05 PM",
-        link: "#",
-          },
-          {
-        title: "Switzerland",
-        image: ch,
-        visaCount: "30K",
-        date: "22 Sep, 12:00 AM",
-        link: "#",
-          },
-          {
-        title: "United States",
-        image: us,
-        visaCount: "28K",
-        date: "10 Sep, 11:00 AM",
-        link: "#",
-          },
-          {
-        title: "United Kingdom",
-        image: uk,
-        visaCount: "25K",
-        date: "15 Sep, 03:45 PM",
-        link: "#",
-          },
-          {
-        title: "Canada",
-        image: ca,
-        visaCount: "20K",
-        date: "12 Sep, 09:30 AM",
-        link: "#",
-          },
-          {
-        title: "Australia",
-        image: au,
-        visaCount: "18K",
-        date: "20 Sep, 10:15 AM",
-        link: "#",
-          },
-          {
-        title: "japan",
-        image:  jp,
-        visaCount: "15K",
-        date: "12 Sep, 09:30 AM",
-        lnk: "#",
-          },
-          {
-        title: "France",
-        image: fr,
-        visaCount: "22K",
-        date: "18 Sep, 02:30 PM",
-        link: "#",
-          },
-          {
-        title: "Germany",
-        image: gr,
-        visaCount: "19K",
-        date: "14 Sep, 01:15 PM",
-        link: "#",
-          },
-          {
-        title: "Italy",
-        image: it,
-        visaCount: "17K",
-        date: "16 Sep, 11:45 AM",
-        link: "#",
-          },
-          {
-        title: "oman",
-        image: om,
-        visaCount: "16K",
-        date: "19 Sep, 04:20 PM",
-        link: "#",
-          },
-          {
-        title: "Hong Kong",
-        image: HK,
-        visaCount: "14K",
-        date: "17 Sep, 10:30 AM",
-        link: "#",
-          },
-          {
-        title: "South Korea",
-        image: kr,
-        visaCount: "13K",
-        date: "21 Sep, 03:00 PM",
-        link: "#",
-          },
-          {
-        title: "Malaysia",
-        image: my,
-        visaCount: "12K",
-        date: "25 Sep, 05:45 PM",
-        link: "#",
-          }
-        ].map((trip, index) => (
-              <a
-          key={index}
-          href={trip.link}
-                className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
-              >
+      {[
+        {
+    title: "United Arab Emirates",
+    image: ae,
+    visaCount: "53K",
+    date: "27 Aug, 07:21 AM",
+    link: "#",
+  },
+  {
+    title: "Thailand",
+    image: th,
+    visaCount: "32K",
+    date: "23 Aug, 02:05 PM",
+    link: "#",
+  },
+  {
+    title: "Switzerland",
+    image: ch,
+    visaCount: "30K",
+    date: "22 Sep, 12:00 AM",
+    link: "#",
+  },
+  {
+    title: "United States",
+    image: us,
+    visaCount: "28K",
+    date: "10 Sep, 11:00 AM",
+    link: "#",
+  },
+  {
+    title: "United Kingdom",
+    image: uk,
+    visaCount: "25K",
+    date: "15 Sep, 03:45 PM",
+    link: "#",
+  },
+  {
+    title: "Canada",
+    image: ca,
+    visaCount: "20K",
+    date: "12 Sep, 09:30 AM",
+    link: "#",
+  },
+  {
+    title: "Australia",
+    image: au,
+    visaCount: "18K",
+    date: "20 Sep, 10:15 AM",
+    link: "#",
+  },
+  {
+    title: "Japan",
+    image: jp,
+    visaCount: "15K",
+    date: "12 Sep, 09:30 AM",
+    link: "#",
+  },
+  {
+    title: "France",
+    image: fr,
+    visaCount: "22K",
+    date: "18 Sep, 02:30 PM",
+    link: "#",
+  },
+  {
+    title: "Germany",
+    image: de,
+    visaCount: "19K",
+    date: "14 Sep, 01:15 PM",
+    link: "#",
+  },
+  {
+    title: "Italy",
+    image: it,
+    visaCount: "17K",
+    date: "16 Sep, 11:45 AM",
+    link: "#",
+  },
+  {
+    title: "Oman",
+    image: om,
+    visaCount: "16K",
+    date: "19 Sep, 04:20 PM",
+    link: "#",
+  },
+  {
+    title: "Hong Kong",
+    image: hk,
+    visaCount: "14K",
+    date: "17 Sep, 10:30 AM",
+    link: "#",
+  },
+  {
+    title: "South Korea",
+    image: kr,
+    visaCount: "13K",
+    date: "21 Sep, 03:00 PM",
+    link: "#",
+  },
+  {
+    title: "Malaysia",
+    image: my,
+    visaCount: "12K",
+    date: "25 Sep, 05:45 PM",
+    link: "#",
+  },
+  {
+    title: "Singapore",
+    image: sg,
+    visaCount: "24K",
+    date: "15 Sep, 08:40 AM",
+    link: "#",
+  },
+  {
+    title: "Turkey",
+    image: tr,
+    visaCount: "13K",
+    date: "09 Sep, 08:00 PM",
+    link: "#",
+  },
+  {
+    title: "Saudi Arabia",
+    image: sa,
+    visaCount: "12K",
+    date: "25 Aug, 07:30 PM",
+    link: "#",
+  },
+  {
+    title: "Qatar",
+    image: qa,
+    visaCount: "11K",
+    date: "14 Sep, 11:11 AM",
+    link: "#",
+  },
+  {
+    title: "Netherlands",
+    image: nl,
+    visaCount: "8K",
+    date: "01 Sep, 09:15 AM",
+    link: "#",
+  },
+  {
+    title: "South Africa",
+    image: za,
+    visaCount: "7K",
+    date: "17 Sep, 01:30 PM"},
+].map((trip, index) => (
+  <a
+    key={index}
+    href={trip.link}
+    className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
+  >
           {/* Image */}
           <div className="relative">
                   <img

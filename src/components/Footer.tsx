@@ -55,15 +55,16 @@ export function Footer() {
             </ul>
           </div>
           {/* Weekend Trips */}
+          
           <div>
             <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Weekend Trips</h3>
             <ul className="space-y-2 text-base">
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vrindavan</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Agra</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">KhatuShyam</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Chopta Tungnath</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Manali Sissu Kasol</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Jibhi & Tirthan Valley</Link></li>
+              <li><Link to="/Vrindavan-Tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vrindavan</Link></li>
+              <li><Link to="/Agra-Tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Agra</Link></li>
+              <li><Link to="/Khatushyam-Tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">KhatuShyam</Link></li>
+              <li><Link to="/chopta-Tungnath" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Chopta Tungnath</Link></li>
+              <li><Link to="/manali-sissu-kasol" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Manali Sissu Kasol</Link></li>
+              <li><Link to="/jibhi-tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Jibhi & Tirthan Valley</Link></li>
             
             </ul>
           </div>
@@ -71,12 +72,12 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>International Trips</h3>
             <ul className="space-y-2 text-base">
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vietnam</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Thailand</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kazakhstan</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bali </Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Dubai</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bhutan</Link></li>
+              <li><Link to="/Veitnam" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vietnam</Link></li>
+              <li><Link to="/Thailand" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Thailand</Link></li>
+              <li><Link to="/Kazakhstan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kazakhstan</Link></li>
+              <li><Link to="/Bali" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bali </Link></li>
+              <li><Link to="/Dubai" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Dubai</Link></li>
+              <li><Link to="/Bhutan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bhutan</Link></li>
             </ul>
           </div>
           {/* Quick Links */}
@@ -85,7 +86,7 @@ export function Footer() {
             <ul className="space-y-2 text-base">
               <li><Link to="/privacy" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Terms & Conditions</Link></li>
-              <li><Link to="/faq" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Frequently Asked Questions</Link></li>
+              <li><Link to="/Cancellation-and-Refund-Policy" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Cancellation & Refund Policy</Link></li>
               </ul>
           </div>
 
@@ -93,10 +94,10 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Backpacking Trips</h3>
             <ul className="space-y-2 text-base">
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Spiti Valley</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Leh & Ladakh</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Himachal Backpacking</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Meghalaya</Link></li>
+              <li><Link to="/Spiti-Valley" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Spiti Valley</Link></li>
+              <li><Link to="/Leh-Trips" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Leh & Ladakh</Link></li>
+              <li><Link to="/Himachal-Tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Himachal Backpacking</Link></li>
+              <li><Link to="/Meghalaya" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Meghalaya</Link></li>
             </ul>
           </div>
 
@@ -105,11 +106,11 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Domestic Trips</h3>
             <ul className="space-y-2 text-base">
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Himachal</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kashmir</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kerala</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Rajasthan</Link></li>
-              <li><Link to="/" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Uttarakhand</Link></li>
+              <li><Link to="/Himachal" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Himachal</Link></li>
+              <li><Link to="/Kashmir" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kashmir</Link></li>
+              <li><Link to="/Nepal" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Nepal</Link></li>
+              <li><Link to="/Rajasthan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Rajasthan</Link></li>
+              <li><Link to="/Uttarakhand" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Uttarakhand</Link></li>
             </ul>
           </div>
 

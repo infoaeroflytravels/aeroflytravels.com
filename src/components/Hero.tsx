@@ -1,4 +1,6 @@
 import Heroo from "../assets/images/home.jpg"; 
+import '../index.css'; // Add this line in the main JS or JSX file
+
 
 export function Hero() {
   const handleScroll = () => {

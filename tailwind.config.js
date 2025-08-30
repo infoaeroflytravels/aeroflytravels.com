@@ -19,10 +19,10 @@ export default {
         'background-light': '#f8fafc',
         'background': '#f1f5f9',
         'background-dark': '#e2e8f0',
-        
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'), // Add this line to enable custom scrollbar
+  ],
 };
-

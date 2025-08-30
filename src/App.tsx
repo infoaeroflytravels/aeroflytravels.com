@@ -11,7 +11,7 @@ import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import { Careers } from "./pages/Careers";
-import { FAQ } from "./pages/FAQ";
+import { FAQ } from "./pages/Cancellation & Refund Policy";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
 import { OtherServices } from "./pages/OtherServices";
@@ -20,6 +20,33 @@ import Gallery from "./pages/gallery";
 import ServiceDetails from "./pages/service";
 import SchemaMarkup from "./SchemaMarkup";
 import Loader from "./components/loader"; // ✅ Loader Component
+import AgraOneDayTourPage from "./pages/trips/Agra-One-Day"; // ✅ Agra One Day Tour Page
+
+import VrindavanOneDayTourPage from "./pages/trips/Vrindavan-One-Day"; // ✅ Vrindavan One Day Tour Page
+import ChoptaTourPage from "./pages/trips/Chopta-Tungnath";
+import KhatuShyamTourPage from "./pages/trips/Khatushyam";
+import ManaliTourPage from "./pages/trips/Manali-Group-Trips";
+import SpitiTourPage from "./pages/trips/Spiti Valley";
+import JibhiValleyTourPage from "./pages/trips/Jibhi-Tirthan-Valley";
+import VeitnamTourPage from "./pages/trips/Vietnam";
+import ThailandTourPage from "./pages/trips/Thailand";
+import KazakhstanTourPage from "./pages/trips/Kazakhstan";
+import BaliTourPage from "./pages/trips/Bali";
+import DubaiTourPage from "./pages/trips/Dubai"; 
+import BhutanTourPage from "./pages/trips/Bhutan";
+import HimachalTourPage from "./pages/trips/Himachal";
+import KashmirTourPage from "./pages/trips/kashmir";
+import NepalTourPage from "./pages/trips/Nepal";
+import RajasthanTourPage from "./pages/trips/Rajasthan";
+import UttarakhandTourPage from "./pages/trips/Uttarakhand";
+import MeghalayaTourPage from "./pages/trips/Meghalaya";
+import LehTourPage from "./pages/trips/Leh-Ladakh"; 
+
+
+
+
+
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -59,11 +86,33 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />
-            <Route path="/faq" element={<FAQ />} />
+            <Route path="/Cancellation & Refund Policy" element={<FAQ />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/Agra-Tour" element={<AgraOneDayTourPage />} />
+            <Route path="/Vrindavan-Tour" element={<VrindavanOneDayTourPage />} />
+            <Route path="/chopta-Tungnath" element={<ChoptaTourPage />} />
+            <Route path="/Khatushyam-Tour" element={<KhatuShyamTourPage />} />
+            <Route path="/manali-sissu-kasol" element={<ManaliTourPage />} />
+            <Route path="/jibhi-tour" element={<JibhiValleyTourPage />} />
+            <Route path="/Spiti-Valley" element={<SpitiTourPage />} />
+            <Route path="/Veitnam" element={<VeitnamTourPage />} />
+            <Route path="/Thailand" element={<ThailandTourPage />} />
+            <Route path="/Kazakhstan" element={<KazakhstanTourPage />} />
+            <Route path="/Bali" element={<BaliTourPage />} />
+            <Route path="/Dubai" element={<DubaiTourPage />} />
+            <Route path="/Bhutan" element={<BhutanTourPage />} />
+            <Route path="/Himachal" element={<HimachalTourPage />} />
+            <Route path="/Kashmir" element={<KashmirTourPage />} />
+            <Route path="/Nepal" element={<NepalTourPage />} />
+            <Route path="/Rajasthan" element={<RajasthanTourPage/>} />
+            <Route path="/Uttarakhand" element={<UttarakhandTourPage/>} />
+            <Route path="/Meghalaya" element={<MeghalayaTourPage/>} />
+            <Route path="/Leh-Trips" element={<LehTourPage />} />
+            <Route path="/Himachal-Tour" element={<VeitnamTourPage />} />
             <Route path="/service/:title" element={<ServiceDetails />} />
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

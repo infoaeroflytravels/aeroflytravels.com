@@ -214,3 +214,28 @@ html, body {
   opacity: 1;
   animation: border-rotate 2s linear infinite;
 }
+
+/* Custom Scrollbar Styles */
+:root {
+  --scrollbar-thumb-color: #6b7280;
+  --scrollbar-track-color: #e5e7eb;
+  --scrollbar-width: 12px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+html::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}

@@ -108,6 +108,7 @@ function App() {
             <Route path="/Nepal" element={<NepalTourPage />} />
             <Route path="/Rajasthan" element={<RajasthanTourPage/>} />
             <Route path="/Uttarakhand" element={<UttarakhandTourPage/>} />
+
             <Route path="/Meghalaya" element={<MeghalayaTourPage/>} />
             <Route path="/Leh-Trips" element={<LehTourPage />} />
             <Route path="/Himachal-Tour" element={<VeitnamTourPage />} />

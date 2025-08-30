@@ -338,6 +338,15 @@ Whether you're chasing adrenaline, culture, or just some sun-soaked relaxation, 
       date: new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' }),
       category: "Budget Travel",
       image: "/path-to-travel-image.jpg",
-    }
+    },
+    { id: 4,
+      title: "Top 5 Budget Travel Destinations for 2025",
+      content: `**Top 5 Budget Travel Destinations for 2025**`,
+      author: "Rudr",
+      date: new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' }),
+      category: "Budget Travel",
+      image: "/path-to-travel-image.jpg",
+
+    },
   ];
   

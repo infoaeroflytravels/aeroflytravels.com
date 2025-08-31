@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { TrustSection } from "./components/TrustSection";
 import { FlightBooking } from "./pages/FlightBooking";
-import { VisaServices } from "./pages/VisaServices";
+import { VisaServices } from "./pages/visa/VisaServices";
 import { TourPackages } from "./pages/TourPackages";
 import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
@@ -21,7 +21,6 @@ import ServiceDetails from "./pages/service";
 import SchemaMarkup from "./SchemaMarkup";
 import Loader from "./components/loader"; // ✅ Loader Component
 import AgraOneDayTourPage from "./pages/trips/Agra-One-Day"; // ✅ Agra One Day Tour Page
-
 import VrindavanOneDayTourPage from "./pages/trips/Vrindavan-One-Day"; // ✅ Vrindavan One Day Tour Page
 import ChoptaTourPage from "./pages/trips/Chopta-Tungnath";
 import KhatuShyamTourPage from "./pages/trips/Khatushyam";
@@ -41,6 +40,41 @@ import RajasthanTourPage from "./pages/trips/Rajasthan";
 import UttarakhandTourPage from "./pages/trips/Uttarakhand";
 import MeghalayaTourPage from "./pages/trips/Meghalaya";
 import LehTourPage from "./pages/trips/Leh-Ladakh"; 
+
+import ThailandVisa from "./pages/visa/thailand";
+import UAEVisa from "./pages/visa/UnitedArabEmirates";
+
+import Japanvisa from "./pages/visa/japan-visa";
+import Hongkongvisa from "./pages/visa/HongKong";
+
+import SwitzerlandVisa from "./pages/visa/Switzerland";
+import UnitedStatesVisa from "./pages/visa/UnitedStates";
+import UnitedKingdomVisa from "./pages/visa/UnitedKingdom"; 
+import CanadaVisa from "./pages/visa/Canada";
+import AustraliaVisa from "./pages/visa/Australia";
+import FranceVisa from "./pages/visa/France";
+import GermanyVisa from "./pages/visa/Germany";
+import ItalyVisa from "./pages/visa/Italy";
+import OmanVisa from "./pages/visa/Oman";
+import HongKongVisa from "./pages/visa/HongKong";
+import SouthKoreaVisa from "./pages/visa/SouthKorea";
+import MalaysiaVisa from "./pages/visa/Malaysia";
+import SingaporeVisa from "./pages/visa/Singapore";
+import TurkeyVisa from "./pages/visa/Turkey";
+import SaudiArabiaVisa from "./pages/visa/SaudiArabia";
+import QatarVisa from "./pages/visa/Qatar";
+import NetherlandsVisa from "./pages/visa/Netherlands";
+import SouthAfricaVisa from "./pages/visa/SouthAfrica";
+
+
+import PassportRanking from "@/ppt";
+
+
+import PassportGallery from "./pages/passport/PassportGallery";
+import PassportDetail from "./pages/passport/PassportDetail";
+
+
+
 
 
 
@@ -108,11 +142,45 @@ function App() {
             <Route path="/Nepal" element={<NepalTourPage />} />
             <Route path="/Rajasthan" element={<RajasthanTourPage/>} />
             <Route path="/Uttarakhand" element={<UttarakhandTourPage/>} />
-
             <Route path="/Meghalaya" element={<MeghalayaTourPage/>} />
             <Route path="/Leh-Trips" element={<LehTourPage />} />
             <Route path="/Himachal-Tour" element={<VeitnamTourPage />} />
             <Route path="/service/:title" element={<ServiceDetails />} />
+
+
+            <Route path="/visa/thailand-visa" element={<ThailandVisa />} />
+            <Route path="/visa/uae-visa" element={<UAEVisa />} />
+            <Route path="/visa/japan-visa" element={<Japanvisa />} />
+            <Route path="/visa/hongkong-visa" element={<Hongkongvisa />} />
+
+
+            <Route path="/visa/thailand-visa" element={<ThailandVisa />} />
+            <Route path="/visa/uae-visa" element={<UAEVisa />} />
+            <Route path="/visa/switzerland-visa" element={<SwitzerlandVisa />} />
+            <Route path="/visa/united-states-visa" element={<UnitedStatesVisa />} />
+            <Route path="/visa/united-kingdom-visa" element={<UnitedKingdomVisa />} />
+            <Route path="/visa/canada-visa" element={<CanadaVisa />} />
+            <Route path="/visa/australia-visa" element={<AustraliaVisa />} />
+            <Route path="/visa/france-visa" element={<FranceVisa />} />
+            <Route path="/visa/germany-visa" element={<GermanyVisa />} />
+            <Route path="/visa/italy-visa" element={<ItalyVisa />} />
+            <Route path="/visa/oman-visa" element={<OmanVisa />} />
+            <Route path="/visa/hong-kong-visa" element={<HongKongVisa />} />
+            <Route path="/visa/south-korea-visa" element={<SouthKoreaVisa />} />
+            <Route path="/visa/malaysia-visa" element={<MalaysiaVisa />} />
+            <Route path="/visa/singapore-visa" element={<SingaporeVisa />} />
+            <Route path="/visa/turkey-visa" element={<TurkeyVisa />} />
+            <Route path="/visa/saudi-arabia-visa" element={<SaudiArabiaVisa />} />
+            <Route path="/visa/qatar-visa" element={<QatarVisa />} />
+            <Route path="/visa/netherlands-visa" element={<NetherlandsVisa />} />
+            <Route path="/visa/south-africa-visa" element={<SouthAfricaVisa />} />
+
+            <Route path="/passport-ranking" element={<PassportRanking />} />
+            <Route path="/passport" element={<PassportGallery />} />
+            <Route path="/passport/:country" element={<PassportDetail />} />
+
+
+
 
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

@@ -1,27 +1,28 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Globe, FileCheck, Clock, DollarSign } from "lucide-react";
-import visa from "../assets/images/visa.jpg";
-import ae from "../assets/trips/AE.webp";
-import tr from "../assets/visa/GR.png";
-import sg from "../assets/visa/HK.webp";
-import de from "../assets/visa/HK.webp";
-import hk from "../assets/visa/HK.webp";
-import sa from "../assets/visa/JP.png";
-import qa from "../assets/visa/JP.png";
-import th from "../assets/visa/Thailand.avif";
-import ch from "../assets/visa/switzerland.webp";
-import us from "../assets/visa/US.webp";
-import uk from "../assets/visa/GB.webp";
-import ca from "../assets/visa/CA.png";
-import au from "../assets/visa/AU.png";
-import fr from "../assets/visa/FR.webp";
-import it from "../assets/visa/IT.png";
-import om from "../assets/visa/OM.webp";
-import jp from "../assets/visa/JP.png";
-import kr from "../assets/visa/KR.png";
-import my from "../assets/visa/MY.webp";
-import nl from "../assets/visa/EG.webp";
-import za from "../assets/visa/ES.png";
+import visa from "../../assets/images/visa.jpg";
+import ae from "../../assets/trips/AE.webp";
+import tr from "../../assets/visa/GR.png";
+import sg from "../../assets/visa/HK.webp";
+import de from "../../assets/visa/HK.webp";
+import hk from "../../assets/visa/HK.webp";
+import sa from "../../assets/visa/JP.png";
+import qa from "../../assets/visa/JP.png";
+import th from "../../assets/visa/Thailand.avif";
+import ch from "../../assets/visa/switzerland.webp";
+import us from "../../assets/visa/US.webp";
+import uk from "../../assets/visa/GB.webp";
+import ca from "../../assets/visa/CA.png";
+import au from "../../assets/visa/AU.png";
+import fr from "../../assets/visa/FR.webp";
+import it from "../../assets/visa/IT.png";
+import om from "../../assets/visa/OM.webp";
+import jp from "../../assets/visa/JP.png";
+import kr from "../../assets/visa/KR.png";
+import my from "../../assets/visa/MY.webp";
+import nl from "../../assets/visa/EG.webp";
+import za from "../../assets/visa/ES.png";
 
 
 
@@ -134,43 +135,7 @@ export function VisaServices() {
         </div>
       </div>
 
-      {/* Features */}
-      <div className="w-full min-h-screen">
-      <div className="py-12 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            {
-              icon: Globe,
-              title: "Global Coverage",
-              text: "Visa services for over 100 countries",
-            },
-            {
-              icon: FileCheck,
-              title: "Expert Guidance",
-              text: "Complete documentation support",
-            },
-            {
-              icon: Clock,
-              title: "Fast Processing",
-              text: "Quick turnaround time",
-            },
-            {
-              icon: DollarSign,
-              title: "Competitive Rates",
-              text: "Best prices guaranteed",
-            },
-          ].map(({ icon: Icon, title, text }, index) => (
-            <div
-              key={index}
-              className="text-center p-4 sm:p-6 bg-white rounded-lg shadow-md"
-            >
-              <Icon className="h-10 w-10 text-blue-600 mx-auto mb-2" />
-              <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">{text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
       {/* Popular Destinations */}
 <div className="w-full min-h-screen bg-gray-100 flex flex-col items-center justify-center">
@@ -189,146 +154,148 @@ export function VisaServices() {
     image: ae,
     visaCount: "53K",
     date: "27 Aug, 07:21 AM",
-    link: "#",
+    link: "/nppm/passport",
   },
   {
     title: "Thailand",
     image: th,
     visaCount: "32K",
     date: "23 Aug, 02:05 PM",
-    link: "#",
+    link: "/nppm/visa/thailand-visa",
   },
   {
     title: "Switzerland",
     image: ch,
     visaCount: "30K",
     date: "22 Sep, 12:00 AM",
-    link: "#",
+    link: "/nppm/visa/switzerland-visa",
   },
   {
     title: "United States",
     image: us,
     visaCount: "28K",
     date: "10 Sep, 11:00 AM",
-    link: "#",
+    link: "/nppm/visa/united-states-visa",
   },
   {
     title: "United Kingdom",
     image: uk,
     visaCount: "25K",
     date: "15 Sep, 03:45 PM",
-    link: "#",
+    link: "/nppm/visa/united-kingdom-visa",
   },
   {
     title: "Canada",
     image: ca,
     visaCount: "20K",
     date: "12 Sep, 09:30 AM",
-    link: "#",
+    link: "/nppm/visa/canada-visa",
   },
   {
     title: "Australia",
     image: au,
     visaCount: "18K",
     date: "20 Sep, 10:15 AM",
-    link: "#",
+    link: "/nppm/visa/australia-visa",
   },
   {
     title: "Japan",
     image: jp,
     visaCount: "15K",
     date: "12 Sep, 09:30 AM",
-    link: "#",
+    link: "/nppm/visa/japan-visa",
   },
   {
     title: "France",
     image: fr,
     visaCount: "22K",
     date: "18 Sep, 02:30 PM",
-    link: "#",
+    link: "/nppm/visa/france-visa",
   },
   {
     title: "Germany",
     image: de,
     visaCount: "19K",
     date: "14 Sep, 01:15 PM",
-    link: "#",
+    link: "/nppm/visa/germany-visa",
   },
   {
     title: "Italy",
     image: it,
     visaCount: "17K",
     date: "16 Sep, 11:45 AM",
-    link: "#",
+    link: "/nppm/visa/italy-visa",
   },
   {
     title: "Oman",
     image: om,
     visaCount: "16K",
     date: "19 Sep, 04:20 PM",
-    link: "#",
+    link: "/nppm/visa/oman-visa",
   },
   {
     title: "Hong Kong",
     image: hk,
     visaCount: "14K",
     date: "17 Sep, 10:30 AM",
-    link: "#",
+    link: "/nppm/visa/hong-kong-visa",
   },
   {
     title: "South Korea",
     image: kr,
     visaCount: "13K",
     date: "21 Sep, 03:00 PM",
-    link: "#",
+    link: "/nppm/visa/south-korea-visa",
   },
   {
     title: "Malaysia",
     image: my,
     visaCount: "12K",
     date: "25 Sep, 05:45 PM",
-    link: "#",
+    link: "/nppm/visa/malaysia-visa",
   },
   {
     title: "Singapore",
     image: sg,
     visaCount: "24K",
     date: "15 Sep, 08:40 AM",
-    link: "#",
+    link: "/nppm/visa/singapore-visa",
   },
   {
     title: "Turkey",
     image: tr,
     visaCount: "13K",
     date: "09 Sep, 08:00 PM",
-    link: "#",
+    link: "/nppm/visa/turkey-visa",
   },
   {
     title: "Saudi Arabia",
     image: sa,
     visaCount: "12K",
     date: "25 Aug, 07:30 PM",
-    link: "#",
+    link: "/nppm/visa/saudi-arabia-visa",
   },
   {
     title: "Qatar",
     image: qa,
     visaCount: "11K",
     date: "14 Sep, 11:11 AM",
-    link: "#",
+    link: "/nppm/visa/qatar-visa",
   },
   {
     title: "Netherlands",
     image: nl,
     visaCount: "8K",
     date: "01 Sep, 09:15 AM",
-    link: "#",
+    link: "/nppm/visa/netherlands-visa",
   },
   {
     title: "South Africa",
     image: za,
     visaCount: "7K",
-    date: "17 Sep, 01:30 PM"},
+    date: "17 Sep, 01:30 PM",
+    link: "/nppm/visa/south-africa-visa",
+  },
 ].map((trip, index) => (
   <a
     key={index}
@@ -383,6 +350,44 @@ export function VisaServices() {
               )
             )}
           </div>
+        </div>
+      </div>
+
+      {/* Features */}
+      <div className="w-full min-h-screen">
+      <div className="py-12 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            {
+              icon: Globe,
+              title: "Global Coverage",
+              text: "Visa services for over 100 countries",
+            },
+            {
+              icon: FileCheck,
+              title: "Expert Guidance",
+              text: "Complete documentation support",
+            },
+            {
+              icon: Clock,
+              title: "Fast Processing",
+              text: "Quick turnaround time",
+            },
+            {
+              icon: DollarSign,
+              title: "Competitive Rates",
+              text: "Best prices guaranteed",
+            },
+          ].map(({ icon: Icon, title, text }, index) => (
+            <div
+              key={index}
+              className="text-center p-4 sm:p-6 bg-white rounded-lg shadow-md"
+            >
+              <Icon className="h-10 w-10 text-blue-600 mx-auto mb-2" />
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <p className="text-gray-600 text-sm sm:text-base">{text}</p>
+            </div>
+          ))}
         </div>
       </div>
 

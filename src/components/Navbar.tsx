@@ -7,6 +7,7 @@ import Gallery from "../pages/gallery";
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
@@ -59,6 +60,7 @@ export function Navbar() {
                 className="relative"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen(false)}
               >
                 <button
                   className="px-4 py-0 font-semibold transition-colors"
@@ -68,36 +70,37 @@ export function Navbar() {
                 </button>
 
                 {isServicesOpen && (
-                  <div
-                    className="absolute left-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 
-                               rounded-xl shadow-xl z-50 animate-fadeSlide p-2 flex space-x-3"
-                  >
-                    <Link
-                      to="/flights"
-                      className="px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-                    >
-                      ✈ Flights
-                    </Link>
-                    <Link
-                      to="/packages"
-                      className="px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-                    >
-                      🌍 Tours
-                    </Link>
-                    <Link
-                      to="/visas"
-                      className="px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-                    >
-                      🛂 Visa
-                    </Link>
-                    <Link
-                      to="/Other-Services"
-                      className="px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-                    >
-                      🛡 Insurance
-                    </Link>
-                  </div>
-                )}
+  <div
+    className="absolute left-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 
+               rounded-xl shadow-xl z-[600] animate-fadeSlide p-2 flex flex-col space-y-2"
+  >
+    <Link
+      to="/flights"
+      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+    >
+      <span className="mr-2">✈</span> Flights
+    </Link>
+    <Link
+      to="/packages"
+      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+    >
+      <span className="mr-2">🌍</span> Tours
+    </Link>
+    <Link
+      to="/visas"
+      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+    >
+      <span className="mr-2">🛂</span> Visa
+    </Link>
+    <Link
+      to="/Other-Services"
+      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+    >
+      <span className="mr-2">🛡</span> Insurance
+    </Link>
+  </div>
+)}
+
               </li>
 
               <li>

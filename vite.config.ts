@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { copyFileSync } from 'fs';
-import { resolve } from 'path';
+import path, { resolve } from 'path';
 
 const copyStaticFiles = () => {
   return {
@@ -10,7 +10,7 @@ const copyStaticFiles = () => {
       try {
         copyFileSync(resolve(__dirname, 'sitemap.xml'), resolve(__dirname, 'dist/sitemap.xml'));
         copyFileSync(resolve(__dirname, 'robots.txt'), resolve(__dirname, 'dist/robots.txt'));
-      } catch (err) {
+      } catch (err: any) {
         console.warn("⚠️ Skipping static files copy (not found)", err.message);
       }
     }
@@ -20,6 +20,11 @@ const copyStaticFiles = () => {
 export default defineConfig({
   base: "/nppm/",
   plugins: [react(), copyStaticFiles()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),  // 👈 add alias
+    },
+  },
   build: {
     outDir: "dist",
     rollupOptions: {

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Globe, FileCheck, Clock, DollarSign } from "lucide-react";
 import visa from "../../assets/images/visa.jpg";
 import ae from "../../assets/trips/AE.webp";
@@ -24,19 +23,7 @@ import my from "../../assets/visa/MY.webp";
 import nl from "../../assets/visa/EG.webp";
 import za from "../../assets/visa/ES.png";
 
-
-
 export function VisaServices() {
-  const countries = [
-    { name: "United States", flag: "🇺🇸" },
-    { name: "United Kingdom", flag: "🇬🇧" },
-    { name: "Schengen", flag: "🇪🇺" },
-    { name: "Canada", flag: "🇨🇦" },
-    { name: "Australia", flag: "🇦🇺" },
-    { name: "Dubai", flag: "🇦🇪" },
-    { name: "India", flag: "🇮🇳" },
-  ];
-
   const formLink =
     "https://docs.google.com/forms/d/e/1FAIpQLSf0gSEES4nN5JH-9IY-kuynlJhU10qJzvteYx5t0tIPnD8CzQ/viewform";
 
@@ -46,10 +33,7 @@ export function VisaServices() {
       (window as any).VHQVisaRequiredWidget = [];
       (window as any).VHQVisaRequiredWidget.push([
         "init",
-        {
-          containerId: "vhq-visa-required-widget",
-          language: "en",
-        },
+        { containerId: "vhq-visa-required-widget", language: "en" },
       ]);
 
       const script = document.createElement("script");
@@ -81,11 +65,7 @@ export function VisaServices() {
       (window as any).VHQWidgetMultigroupRequirements = [];
       (window as any).VHQWidgetMultigroupRequirements.push([
         "init",
-        {
-          containerId: "retail-visa-multigroup-requirements-widget",
-          lang: "en",
-          domain: "https://www.visahq.in",
-        },
+        { containerId: "retail-visa-multigroup-requirements-widget", lang: "en", domain: "https://www.visahq.in" },
       ]);
 
       const script2 = document.createElement("script");
@@ -97,9 +77,7 @@ export function VisaServices() {
 
       script2.onload = () => {
         setTimeout(() => {
-          const widget2 = document.getElementById(
-            "retail-visa-multigroup-requirements-widget"
-          );
+          const widget2 = document.getElementById("retail-visa-multigroup-requirements-widget");
           if (widget2) {
             widget2.addEventListener("click", (e) => {
               const target = e.target as HTMLElement;
@@ -114,6 +92,30 @@ export function VisaServices() {
       };
     }
   }, []);
+
+  const trips = [
+    { title: "United Arab Emirates", image: ae, visaCount: "53K", date: "27 Aug, 07:21 AM", link: "/nppm/passport" },
+    { title: "Thailand", image: th, visaCount: "32K", date: "23 Aug, 02:05 PM", link: "/nppm/visa/thailand-visa" },
+    { title: "Switzerland", image: ch, visaCount: "30K", date: "22 Sep, 12:00 AM", link: "/nppm/visa/switzerland-visa" },
+    { title: "United States", image: us, visaCount: "28K", date: "10 Sep, 11:00 AM", link: "/nppm/visa/united-states-visa" },
+    { title: "United Kingdom", image: uk, visaCount: "25K", date: "15 Sep, 03:45 PM", link: "/nppm/visa/united-kingdom-visa" },
+    { title: "Canada", image: ca, visaCount: "20K", date: "12 Sep, 09:30 AM", link: "/nppm/visa/canada-visa" },
+    { title: "Australia", image: au, visaCount: "18K", date: "20 Sep, 10:15 AM", link: "/nppm/visa/australia-visa" },
+    { title: "Japan", image: jp, visaCount: "15K", date: "12 Sep, 09:30 AM", link: "/nppm/visa/japan-visa" },
+    { title: "France", image: fr, visaCount: "22K", date: "18 Sep, 02:30 PM", link: "/nppm/visa/france-visa" },
+    { title: "Germany", image: de, visaCount: "19K", date: "14 Sep, 01:15 PM", link: "/nppm/visa/germany-visa" },
+    { title: "Italy", image: it, visaCount: "17K", date: "16 Sep, 11:45 AM", link: "/nppm/visa/italy-visa" },
+    { title: "Oman", image: om, visaCount: "16K", date: "19 Sep, 04:20 PM", link: "/nppm/visa/oman-visa" },
+    { title: "Hong Kong", image: hk, visaCount: "14K", date: "17 Sep, 10:30 AM", link: "/nppm/visa/hong-kong-visa" },
+    { title: "South Korea", image: kr, visaCount: "13K", date: "21 Sep, 03:00 PM", link: "/nppm/visa/south-korea-visa" },
+    { title: "Malaysia", image: my, visaCount: "12K", date: "25 Sep, 05:45 PM", link: "/nppm/visa/malaysia-visa" },
+    { title: "Singapore", image: sg, visaCount: "24K", date: "15 Sep, 08:40 AM", link: "/nppm/visa/singapore-visa" },
+    { title: "Turkey", image: tr, visaCount: "13K", date: "09 Sep, 08:00 PM", link: "/nppm/visa/turkey-visa" },
+    { title: "Saudi Arabia", image: sa, visaCount: "12K", date: "25 Aug, 07:30 PM", link: "/nppm/visa/saudi-arabia-visa" },
+    { title: "Qatar", image: qa, visaCount: "11K", date: "14 Sep, 11:11 AM", link: "/nppm/visa/qatar-visa" },
+    { title: "Netherlands", image: nl, visaCount: "8K", date: "01 Sep, 09:15 AM", link: "/nppm/visa/netherlands-visa" },
+    { title: "South Africa", image: za, visaCount: "7K", date: "17 Sep, 01:30 PM", link: "/nppm/visa/south-africa-visa" },
+  ];
 
   return (
     <div className="w-full min-h-screen">
@@ -135,191 +137,41 @@ export function VisaServices() {
         </div>
       </div>
 
-      
-
       {/* Popular Destinations */}
-<div className="w-full min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-  <div
-    className="max-w-full max-w-7xl border border-gray-300 rounded-4xl py-5 px-2 sm:px-4 md:px-8 lg:px-16 mx-auto"
-    style={{ backgroundColor: "#e4ebebff" }}
-  >
-    <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
-      Popular Destinations
-    </h2>
+      <div className="w-full min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+        <div
+          className="max-w-full max-w-7xl border border-gray-300 rounded-4xl py-5 px-2 sm:px-4 md:px-8 lg:px-16 mx-auto"
+          style={{ backgroundColor: "#e4ebebff" }}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
+            Popular Destinations
+          </h2>
 
-    <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-5 gap-6">
-      {[
-        {
-    title: "United Arab Emirates",
-    image: ae,
-    visaCount: "53K",
-    date: "27 Aug, 07:21 AM",
-    link: "/nppm/passport",
-  },
-  {
-    title: "Thailand",
-    image: th,
-    visaCount: "32K",
-    date: "23 Aug, 02:05 PM",
-    link: "/nppm/visa/thailand-visa",
-  },
-  {
-    title: "Switzerland",
-    image: ch,
-    visaCount: "30K",
-    date: "22 Sep, 12:00 AM",
-    link: "/nppm/visa/switzerland-visa",
-  },
-  {
-    title: "United States",
-    image: us,
-    visaCount: "28K",
-    date: "10 Sep, 11:00 AM",
-    link: "/nppm/visa/united-states-visa",
-  },
-  {
-    title: "United Kingdom",
-    image: uk,
-    visaCount: "25K",
-    date: "15 Sep, 03:45 PM",
-    link: "/nppm/visa/united-kingdom-visa",
-  },
-  {
-    title: "Canada",
-    image: ca,
-    visaCount: "20K",
-    date: "12 Sep, 09:30 AM",
-    link: "/nppm/visa/canada-visa",
-  },
-  {
-    title: "Australia",
-    image: au,
-    visaCount: "18K",
-    date: "20 Sep, 10:15 AM",
-    link: "/nppm/visa/australia-visa",
-  },
-  {
-    title: "Japan",
-    image: jp,
-    visaCount: "15K",
-    date: "12 Sep, 09:30 AM",
-    link: "/nppm/visa/japan-visa",
-  },
-  {
-    title: "France",
-    image: fr,
-    visaCount: "22K",
-    date: "18 Sep, 02:30 PM",
-    link: "/nppm/visa/france-visa",
-  },
-  {
-    title: "Germany",
-    image: de,
-    visaCount: "19K",
-    date: "14 Sep, 01:15 PM",
-    link: "/nppm/visa/germany-visa",
-  },
-  {
-    title: "Italy",
-    image: it,
-    visaCount: "17K",
-    date: "16 Sep, 11:45 AM",
-    link: "/nppm/visa/italy-visa",
-  },
-  {
-    title: "Oman",
-    image: om,
-    visaCount: "16K",
-    date: "19 Sep, 04:20 PM",
-    link: "/nppm/visa/oman-visa",
-  },
-  {
-    title: "Hong Kong",
-    image: hk,
-    visaCount: "14K",
-    date: "17 Sep, 10:30 AM",
-    link: "/nppm/visa/hong-kong-visa",
-  },
-  {
-    title: "South Korea",
-    image: kr,
-    visaCount: "13K",
-    date: "21 Sep, 03:00 PM",
-    link: "/nppm/visa/south-korea-visa",
-  },
-  {
-    title: "Malaysia",
-    image: my,
-    visaCount: "12K",
-    date: "25 Sep, 05:45 PM",
-    link: "/nppm/visa/malaysia-visa",
-  },
-  {
-    title: "Singapore",
-    image: sg,
-    visaCount: "24K",
-    date: "15 Sep, 08:40 AM",
-    link: "/nppm/visa/singapore-visa",
-  },
-  {
-    title: "Turkey",
-    image: tr,
-    visaCount: "13K",
-    date: "09 Sep, 08:00 PM",
-    link: "/nppm/visa/turkey-visa",
-  },
-  {
-    title: "Saudi Arabia",
-    image: sa,
-    visaCount: "12K",
-    date: "25 Aug, 07:30 PM",
-    link: "/nppm/visa/saudi-arabia-visa",
-  },
-  {
-    title: "Qatar",
-    image: qa,
-    visaCount: "11K",
-    date: "14 Sep, 11:11 AM",
-    link: "/nppm/visa/qatar-visa",
-  },
-  {
-    title: "Netherlands",
-    image: nl,
-    visaCount: "8K",
-    date: "01 Sep, 09:15 AM",
-    link: "/nppm/visa/netherlands-visa",
-  },
-  {
-    title: "South Africa",
-    image: za,
-    visaCount: "7K",
-    date: "17 Sep, 01:30 PM",
-    link: "/nppm/visa/south-africa-visa",
-  },
-].map((trip, index) => (
-  <a
-    key={index}
-    href={trip.link}
-    className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
-  >
-          {/* Image */}
-          <div className="relative">
+          <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-5 gap-6">
+            {trips.map((trip, index) => (
+              <a
+                key={index}
+                href={trip.link}
+                className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
+              >
+                {/* Image */}
+                <div className="relative">
                   <img
                     src={trip.image}
                     alt={trip.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-60 object-cover rounded-lg"
                   />
-            <span className="absolute bottom-3 left-3 bg-purple-600 text-white text-sm font-medium px-3 py-1 rounded-full shadow">
-              {trip.visaCount}+ Visas on Time
-            </span>
-          </div>
-          {/* Content */}
-                <div className="p-4">
-                  <h3 className="text-base font-semibold text-gray-800 mb-2">
+                  <span className="absolute bottom-3 left-3 bg-purple-600 text-white text-sm md:text-base font-medium px-4 py-1.5 rounded-full shadow">
+                    {trip.visaCount}+ Visas on Time
+                  </span>
+                </div>
+                {/* Content */}
+                <div className="p-5">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
                     {trip.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Get on <span className="text-blue-600 font-medium">{trip.date}</span>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    Get on <span className="text-blue-600 font-semibold">{trip.date}</span>
                   </p>
                 </div>
               </a>
@@ -327,8 +179,6 @@ export function VisaServices() {
           </div>
         </div>
       </div>
-
-            
 
       {/* Application Process */}
       <div className="py-12 px-4">
@@ -355,68 +205,52 @@ export function VisaServices() {
 
       {/* Features */}
       <div className="w-full min-h-screen">
-      <div className="py-12 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            {
-              icon: Globe,
-              title: "Global Coverage",
-              text: "Visa services for over 100 countries",
-            },
-            {
-              icon: FileCheck,
-              title: "Expert Guidance",
-              text: "Complete documentation support",
-            },
-            {
-              icon: Clock,
-              title: "Fast Processing",
-              text: "Quick turnaround time",
-            },
-            {
-              icon: DollarSign,
-              title: "Competitive Rates",
-              text: "Best prices guaranteed",
-            },
-          ].map(({ icon: Icon, title, text }, index) => (
+        <div className="py-12 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { icon: Globe, title: "Global Coverage", text: "Visa services for over 100 countries" },
+              { icon: FileCheck, title: "Expert Guidance", text: "Complete documentation support" },
+              { icon: Clock, title: "Fast Processing", text: "Quick turnaround time" },
+              { icon: DollarSign, title: "Competitive Rates", text: "Best prices guaranteed" },
+            ].map(({ icon: Icon, title, text }, index) => (
+              <div
+                key={index}
+                className="text-center p-4 sm:p-6 bg-white rounded-lg shadow-md"
+              >
+                <Icon className="h-10 w-10 text-blue-600 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold">{title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Single-country Widget */}
+        <div className="py-12 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+              Check Visa Requirements
+            </h2>
             <div
-              key={index}
-              className="text-center p-4 sm:p-6 bg-white rounded-lg shadow-md"
-            >
-              <Icon className="h-10 w-10 text-blue-600 mx-auto mb-2" />
-              <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="text-gray-600 text-sm sm:text-base">{text}</p>
-            </div>
-          ))}
+              id="vhq-visa-required-widget"
+              className="w-full min-h-[400px] border rounded-lg shadow-md"
+            ></div>
+          </div>
         </div>
-      </div>
 
-      {/* ✅ Single-country Widget */}
-      <div className="py-12 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-            Check Visa Requirements
-          </h2>
-          <div
-            id="vhq-visa-required-widget"
-            className="w-full min-h-[400px] border rounded-lg shadow-md"
-          ></div>
+        {/* Multi-country Widget */}
+        <div className="py-12 px-4 bg-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+              Multi-country Visa Requirements
+            </h2>
+            <div
+              id="retail-visa-multigroup-requirements-widget"
+              className="w-full min-h-[400px] border rounded-lg shadow-md"
+            ></div>
+          </div>
         </div>
       </div>
-
-      {/* ✅ Multi-country Widget */}
-      <div className="py-12 px-4 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-            Multi-country Visa Requirements
-          </h2>
-          <div
-            id="retail-visa-multigroup-requirements-widget"
-            className="w-full min-h-[400px] border rounded-lg shadow-md"
-          ></div>
-        </div>
-      </div>
-    </div>
     </div>
   );
 }

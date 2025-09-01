@@ -55,8 +55,8 @@ const Gallery = () => {
     kantal2, yulla2, review1, review2, review3, review28, review29, review30,
     review4, review5, review6, review7, review8, review9, review10,review11, review12, review13,
     review14, review15,  manali2, jibhi2, chopta2, review16, review17,  review20, review26, review27,
-    review21, review22, auli2, kedarnath2,thailand, review23, review18, review19, review24, review25,
-    review31, review32, review33, review34, review35, review36, review37, review38, review39, review40,
+    review21, review22, auli2, kedarnath2,thailand, review23, review18, review19, review24, review25, review33, review34,
+    review31, review32, review35, review36, review37, review38, review39, review40, review10, review11, review12, review13,
     // Add more image URLs as needed
   ];
 
@@ -94,23 +94,31 @@ const Gallery = () => {
       setSelectedImage(allImages[currentIndex + 1]);
     }
   };
+  const { ref: heroRef, inView: heroInView } = useInView({ threshold: 0.3, triggerOnce: true });
+
 
   return (
     <div className="relative w-full min-h-screen">
       {/* Hero Section */}
+      
       <div 
-        className="relative h-[300px] md:h-[500px] bg-cover bg-center"
+        className="relative h-[300px] md:h-[700px] bg-cover bg-center"
         style={{ backgroundImage: `url(${galleryBg})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative min-h-[400px] w-full flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-3 capitalize">Our Gallery</h1>
-            <p className="text-lg md:text-xl text-white">
-              Discover the beauty of our moments
-            </p>
-          </div>
-        </div>
+        <div 
+  ref={heroRef}
+  className={`relative min-h-[500px] w-full flex items-center justify-center transition-all duration-1000 
+             ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+>
+  <div className="text-center">
+    <h1 className="text-4xl font-bold text-white mb-3 capitalize">
+      Our Gallery
+    </h1>
+    <p className="text-lg md:text-xl text-white">
+      Discover the beauty of our moments
+    </p>
+  </div>
+</div>
       </div>
       
       {/* Masonry Gallery Section */}

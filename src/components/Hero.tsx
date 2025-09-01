@@ -1,6 +1,6 @@
-import Heroo from "../assets/images/home.jpg"; 
-import '../index.css'; // Add this line in the main JS or JSX file
-
+import Heroo from "../assets/images/home.jpg";
+import "../index.css";
+import { useInView } from "react-intersection-observer";
 
 export function Hero() {
   const handleScroll = () => {
@@ -10,9 +10,14 @@ export function Hero() {
     }
   };
 
+  const { ref: heroRef, inView: heroInView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* ✅ Background Image with Overlay */}
+      {/* Background Image with Overlay */}
       <img
         src={Heroo}
         alt="Travel with Aerofly"
@@ -22,8 +27,12 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* ✅ Content Section */}
-      <div className="relative text-center px-4 sm:px-6 md:px-10 lg:px-16">
+      {/* Content Section */}
+      <div
+        ref={heroRef}
+        className={`relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-10 lg:px-16 transition-all duration-1000 
+          ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-lg">
           <span className="block">Discover the World with</span>
           <span className="block text-[#2a9df4]">Aerofly Travels</span>
@@ -33,11 +42,11 @@ export function Hero() {
           Your journey begins here. Book flights, apply for visas, and explore our curated tour packages.
         </p>
 
-        {/* ✅ Button Section */}
-        <div className="mt-6 flex justify-center">
+        {/* Button Section */}
+        <div className="mt-6">
           <button
             onClick={handleScroll}
-            className="w-full sm:w-auto bg-[#2a9df4] text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium hover:bg-[#1e87d6] transition-colors shadow-lg"
+            className="bg-[#2a9df4] text-white px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg font-medium hover:bg-[#1e87d6] transition-colors shadow-lg"
           >
             Book Now
           </button>

@@ -94,7 +94,7 @@ export function VisaServices() {
   }, []);
 
   const trips = [
-    { title: "United Arab Emirates", image: ae, visaCount: "53K", date: "27 Aug, 07:21 AM", link: "/nppm/passport" },
+    { title: "United Arab Emirates", image: ae, visaCount: "53K", date: "27 Aug, 07:21 AM", link: "/nppm/visa/uae-visa" },
     { title: "Thailand", image: th, visaCount: "32K", date: "23 Aug, 02:05 PM", link: "/nppm/visa/thailand-visa" },
     { title: "Switzerland", image: ch, visaCount: "30K", date: "22 Sep, 12:00 AM", link: "/nppm/visa/switzerland-visa" },
     { title: "United States", image: us, visaCount: "28K", date: "10 Sep, 11:00 AM", link: "/nppm/visa/united-states-visa" },

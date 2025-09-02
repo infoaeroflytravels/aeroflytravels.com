@@ -10,17 +10,17 @@ import paymentIcons5 from "../assets/logo/taai.svg"; // <-- your file
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-Yellow py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="bg-gray-900 text-Yellow py-2" style={{ backgroundColor: '#08383bff' }}>
+      <div className="w-9xl mx-auto px-2 sm:px-6 lg:px-10">
+        <div className="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-5 gap-12">
           
           {/* Company Info */}
           <div>
-           <div className="h-20 w-52 mb-4 flex items-center justify-center rounded-lg shadow" style={{ backgroundColor: '#ffffffff' }}>
+           <div className="h-20 w-52 mb-2 flex items-center justify-center rounded-lg shadow" style={{ backgroundColor: '#ffffffff' }}>
               <img 
                 src={logooo}
                 alt="Aerofly Travels"
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <h3 className="text-xl font-bold" style={{ color: '#00d0dfff' }}>Aerofly Travels</h3>
@@ -51,7 +51,7 @@ export function Footer() {
               <li><Link to="/contact" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Contact us</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Career With us</Link></li>
               <li><Link to="/blog" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Our Blogs</Link></li>
-              <li><Link to="/forums" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Forums</Link></li>
+              <li><Link to="/defence" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Indian Armed Forces</Link></li>
             </ul>
           </div>
           {/* Weekend Trips */}
@@ -77,7 +77,7 @@ export function Footer() {
               <li><Link to="/Kazakhstan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Kazakhstan</Link></li>
               <li><Link to="/Bali" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bali </Link></li>
               <li><Link to="/Dubai" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Dubai</Link></li>
-              <li><Link to="/Bhutan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bhutan</Link></li>
+              
             </ul>
           </div>
           {/* Quick Links */}
@@ -98,6 +98,7 @@ export function Footer() {
               <li><Link to="/Leh-Trips" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Leh & Ladakh</Link></li>
               <li><Link to="/Himachal-Tour" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Himachal Backpacking</Link></li>
               <li><Link to="/Meghalaya" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Meghalaya</Link></li>
+              <li><Link to="/Bhutan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Bhutan</Link></li>
             </ul>
           </div>
 
@@ -111,6 +112,35 @@ export function Footer() {
               <li><Link to="/Nepal" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Nepal</Link></li>
               <li><Link to="/Rajasthan" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Rajasthan</Link></li>
               <li><Link to="/Uttarakhand" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Uttarakhand</Link></li>
+            </ul>
+          </div>
+
+          {/* Tools */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Tools</h3>
+            <ul className="space-y-2 text-base">
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Visa Photo Creator</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Schengen Cover Letter</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Schengen Appointment Checker</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">UAE Status Checker</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vietnam Status Checker</Link></li>
+              <li><Link to="/passport" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Passport Mobility Index</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">DS-160 Tool</Link></li>
+
+
+            </ul>
+          </div>
+
+          {/* Products */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-Yellow-400"style={{ color: '#00d0dfff' }}>Products</h3>
+            <ul className="space-y-2 text-base">
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Security</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Transperancy</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">For Travel Agents</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Visa Pre Approval</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">U.S. Mock Interview</Link></li>
+              <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Canton Fair</Link></li>
             </ul>
           </div>
 

@@ -10,7 +10,7 @@ import paymentIcons5 from "../assets/logo/taai.svg"; // <-- your file
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-Yellow py-2" style={{ backgroundColor: '#08383bff' }}>
+    <footer className="bg-gray-900 text-Yellow py-5" style={{ backgroundColor: '#08383bff' }}>
       <div className="w-9xl mx-auto px-2 sm:px-6 lg:px-10">
         <div className="grid grid-cols-6 md:grid-cols-4 lg:grid-cols-5 gap-12">
           
@@ -87,6 +87,7 @@ export function Footer() {
               <li><Link to="/privacy" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Terms & Conditions</Link></li>
               <li><Link to="/Cancellation-and-Refund-Policy" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Cancellation & Refund Policy</Link></li>
+              <li><Link to="/passport" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Passport Mobility Index</Link></li>
               </ul>
           </div>
 
@@ -124,7 +125,7 @@ export function Footer() {
               <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Schengen Appointment Checker</Link></li>
               <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">UAE Status Checker</Link></li>
               <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Vietnam Status Checker</Link></li>
-              <li><Link to="/passport" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">Passport Mobility Index</Link></li>
+              
               <li><Link to="" className="text-gray-300 hover:text-Yellow-400 transitionstyle={{ color: '#00d0dfff' }}">DS-160 Tool</Link></li>
 
 

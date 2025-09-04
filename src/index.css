@@ -308,3 +308,23 @@ html::-webkit-scrollbar-track {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  min-width: 200%;
+  animation: marquee 20s linear infinite;
+}
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

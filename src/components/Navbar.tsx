@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logoo from "../assets/img/LOGO12.png";
 import aero from "../assets/img/aero.png";
-import Gallery from "../pages/gallery";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,14 +16,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isScrolled = scrollPosition > 50;
   const navTextColor = "#00e0fd";
 
   return (
     <header>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 shadow-md ${
-          isScrolled ? "bg-[#d9ff00d9]" : "bg-grey"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 shadow-md "bg-[#d9ff00d9]" : "bg-grey"
         }`}
       >
         <div className="max-w-full mx-auto px-6 sm:px-8">

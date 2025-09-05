@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Globe, FileCheck, Clock, DollarSign } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Globe, FileCheck, Clock, DollarSign, Search } from "lucide-react";
 import visa from "../../assets/images/visa.jpg";
 import ae from "../../assets/trips/AE.webp";
 import tr from "../../assets/visa/GR.png";
@@ -24,6 +24,7 @@ import nl from "../../assets/visa/EG.webp";
 import za from "../../assets/visa/ES.png";
 
 export function VisaServices() {
+  const [searchTerm, setSearchTerm] = useState("");
   const formLink =
     "https://docs.google.com/forms/d/e/1FAIpQLSf0gSEES4nN5JH-9IY-kuynlJhU10qJzvteYx5t0tIPnD8CzQ/viewform";
 
@@ -117,6 +118,11 @@ export function VisaServices() {
     { title: "South Africa", image: za, visaCount: "7K", date: "17 Sep, 01:30 PM", link: "/nppm/visa/south-africa-visa" },
   ];
 
+  // ✅ Filter trips by search term
+  const filteredTrips = trips.filter((trip) =>
+    trip.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="w-full min-h-screen">
       {/* Hero Section */}
@@ -137,120 +143,75 @@ export function VisaServices() {
         </div>
       </div>
 
-      {/* Popular Destinations */}
-      <div className="w-full min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-        <div
-          className="max-w-full max-w-7xl border border-gray-300 rounded-4xl py-5 px-2 sm:px-4 md:px-8 lg:px-16 mx-auto"
-          style={{ backgroundColor: "#e4ebebff" }}
-        >
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
-            Popular Destinations
-          </h2>
+          {/* 🔍 Sticky Search Bar */}
+<div className="sticky top-2 z-40 bg-blue-100/80 backdrop-blur-md py-4 shadow-sm">
+  <div className="flex justify-center">
+    <div
+      className={`relative w-full sm:w-[500px] transition-all duration-300 
+                  ${searchTerm ? "sm:w-[550px]" : "focus-within:sm:w-[550px]"}`}
+    >
+      {/* Search Icon */}
+      <Search
+        className={`absolute left-4 top-1/2 -translate-y-1/2 transition-all duration-200 
+          ${searchTerm ? "text-blue-500 scale-110" : "text-gray-400"}`}
+        size={22}
+      />
 
+      {/* Input */}
+      <input
+        type="text"
+        placeholder="Search for a destination..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 
+                   shadow-md text-gray-700 placeholder-gray-400 transition duration-300
+                   focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none 
+                   hover:shadow-lg hover:border-blue-400 
+                   focus:shadow-[0_0_25px_rgba(59,130,246,0.3)]"
+      />
+    </div>
+  </div>
+</div>
+
+
+
+          {/* Filtered Trips */}
           <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-5 gap-6">
-            {trips.map((trip, index) => (
-              <a
-                key={index}
-                href={trip.link}
-                className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
-              >
-                {/* Image */}
-                <div className="relative">
-                  <img
-                    src={trip.image}
-                    alt={trip.title}
-                    className="w-full h-60 object-cover rounded-lg"
-                  />
-                  <span className="absolute bottom-3 left-3 bg-purple-600 text-white text-sm md:text-base font-medium px-4 py-1.5 rounded-full shadow">
-                    {trip.visaCount}+ Visas on Time
-                  </span>
-                </div>
-                {/* Content */}
-                <div className="p-5">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
-                    {trip.title}
-                  </h3>
-                  <p className="text-gray-600 text-base md:text-lg">
-                    Get on <span className="text-blue-600 font-semibold">{trip.date}</span>
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Application Process */}
-      <div className="py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-            Visa Application Process
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {["Submit Documents", "Processing", "Receive Visa"].map(
-              (step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-100 rounded-full h-12 w-12 flex items-center justify-center mx-auto mb-3">
-                    <span className="text-lg font-bold text-blue-600">
-                      {index + 1}
+            {filteredTrips.length > 0 ? (
+              filteredTrips.map((trip, index) => (
+                <a
+                  key={index}
+                  href={trip.link}
+                  className="block bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition overflow-hidden"
+                >
+                  {/* Image */}
+                  <div className="relative">
+                    <img
+                      src={trip.image}
+                      alt={trip.title}
+                      className="w-full h-60 object-cover rounded-lg"
+                    />
+                    <span className="absolute bottom-3 left-3 bg-purple-600 text-white text-sm md:text-base font-medium px-4 py-1.5 rounded-full shadow">
+                      {trip.visaCount}+ Visas on Time
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold">{step}</h3>
-                </div>
-              )
+                  {/* Content */}
+                  <div className="p-5">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-3">
+                      {trip.title}
+                    </h3>
+                    <p className="text-gray-600 text-base md:text-lg">
+                      Get on <span className="text-blue-600 font-semibold">{trip.date}</span>
+                    </p>
+                  </div>
+                </a>
+              ))
+            ) : (
+              <p className="col-span-5 text-center text-gray-600">
+                No results found.
+              </p>
             )}
           </div>
         </div>
-      </div>
-
-      {/* Features */}
-      <div className="w-full min-h-screen">
-        <div className="py-12 px-4">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Globe, title: "Global Coverage", text: "Visa services for over 100 countries" },
-              { icon: FileCheck, title: "Expert Guidance", text: "Complete documentation support" },
-              { icon: Clock, title: "Fast Processing", text: "Quick turnaround time" },
-              { icon: DollarSign, title: "Competitive Rates", text: "Best prices guaranteed" },
-            ].map(({ icon: Icon, title, text }, index) => (
-              <div
-                key={index}
-                className="text-center p-4 sm:p-6 bg-white rounded-lg shadow-md"
-              >
-                <Icon className="h-10 w-10 text-blue-600 mx-auto mb-2" />
-                <h3 className="text-lg font-semibold">{title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Single-country Widget */}
-        <div className="py-12 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-              Check Visa Requirements
-            </h2>
-            <div
-              id="vhq-visa-required-widget"
-              className="w-full min-h-[400px] border rounded-lg shadow-md"
-            ></div>
-          </div>
-        </div>
-
-        {/* Multi-country Widget */}
-        <div className="py-12 px-4 bg-gray-100">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-              Multi-country Visa Requirements
-            </h2>
-            <div
-              id="retail-visa-multigroup-requirements-widget"
-              className="w-full min-h-[400px] border rounded-lg shadow-md"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

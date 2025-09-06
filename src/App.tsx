@@ -103,14 +103,14 @@ function App() {
   }
 
   return (
-    <Router basename="/nppm">
+    <Router basename="/nppm/">
       <SchemaMarkup />
       <div className="min-h-screen flex flex-col bg-background">
         <Navbar />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<><Hero /><TrustSection /></>} />
-            <Route path="/nppm" element={<Navigate to="/" replace />} />
+            <Route path="/nppm/" element={<Navigate to="/" replace />} />
             <Route path="/flights" element={<FlightBooking />} />
             <Route path="/visas" element={<VisaServices />} />
             <Route path="/packages" element={<TourPackages />} />

@@ -1,5 +1,5 @@
 {
-  "name": "npm",
+  "name": "nppm",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "start": "vite preview --port 8080"
   },
   "dependencies": {
     "@ngrok/ngrok": "^1.5.2",
@@ -62,8 +63,7 @@
     "vite-plugin-sitemap": "^0.8.2",
     "wait-on": "^8.0.4"
   },
-  "description": "��#\u0000 \u0000n\u0000p\u0000m\u0000\r\u0000 \u0000",
-  "main": "eslint.config.js",
+  "description": "React + Vite project",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AeroflyTravels/nppm.git"

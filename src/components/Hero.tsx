@@ -23,7 +23,7 @@ export function Hero() {
         alt="Travel with Aerofly"
         className="absolute inset-0 w-full h-full object-cover"
         loading="eager"
-        fetchPriority="high"
+       
       />
       <div className="absolute inset-0 bg-black/60"></div>
 

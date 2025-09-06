@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://AeroflyTravels.github.io/nppm",
   "scripts": {
-    "dev": "concurrently -n \"VITE,NGROK\" -c \"green,cyan\" \"vite\" \"wait-on http://localhost:5173 && node ngrok.js\"",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook,  Instagram, Linkedin, MessageSquareMore } from 'lucide-react';
-import logooo from "../assets/img/logof.png";
-import paymentIcons1 from "../assets/logo/iaai.svg"; // <-- your file
-import paymentIcons2 from "../assets/logo/iata.svg" // <-- your file
-import paymentIcons3 from "../assets/logo/iato.svg"; // <-- your file
-import paymentIcons4 from "../assets/logo/ADTOI.svg"; // <-- your file
-import paymentIcons5 from "../assets/logo/taai.svg"; // <-- your file
+import logooo from "@/assets/img/logof.png";
+import paymentIcons1 from "@/assets/logo/iaai.svg"; // <-- your file
+import paymentIcons2 from "@/assets/logo/iata.svg" // <-- your file
+import paymentIcons3 from "@/assets/logo/iato.svg"; // <-- your file
+import paymentIcons4 from "@/assets/logo/ADTOI.svg"; // <-- your file
+import paymentIcons5 from "@/assets/logo/taai.svg"; // <-- your file
 
 
 export function Footer() {

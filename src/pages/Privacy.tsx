@@ -1,5 +1,5 @@
 import React from 'react';
-import tour from "../assets/images/tour.jpg";
+import tour from "@/assets/images/tour.jpg";
 
 export function Privacy() {
   return (

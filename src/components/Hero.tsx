@@ -1,5 +1,5 @@
-import Heroo from "../assets/images/home.jpg";
-import "../index.css";
+import Heroo from "@/assets/images/home.jpg";
+import "@/index.css";
 import { useInView } from "react-intersection-observer";
 
 export function Hero() {

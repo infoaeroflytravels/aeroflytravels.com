@@ -1,36 +1,36 @@
 import React from "react";
 import { Calendar, Users, MapPin, Star } from "lucide-react";
-import tour from "../assets/images/tour.jpg";
+import tour from "@/assets/images/tour.jpg";
 
 // Images
-import thailand from "../assets/img/thailand.jpg";
-import baku from "../assets/img/baku.jpg";
-import mexico from "../assets/img/mexico.jpg";
-import bali from "../assets/img/bali.jpg";
-import vegas from "../assets/img/lasvegas.jpg";
-import vietnam from "../assets/img/vietnam.jpg";
-import srilanka from "../assets/img/srilanka.jpg";
-import ctt from "../assets/trips/chopta1.jpg";
-import msk from "../assets/trips/manali.jpg";
-import jtv from "../assets/trips/jibhi1.jpg";
+import thailand from "@/assets/img/thailand.jpg";
+import baku from "@/assets/img/baku.jpg";
+import mexico from "@/assets/img/mexico.jpg";
+import bali from "@/assets/img/bali.jpg";
+import vegas from "@/assets/img/lasvegas.jpg";
+import vietnam from "@/assets/img/vietnam.jpg";
+import srilanka from "@/assets/img/srilanka.jpg";
+import ctt from "@/assets/trips/chopta1.jpg";
+import msk from "@/assets/trips/manali.jpg";
+import jtv from "@/assets/trips/jibhi1.jpg";
 import vrinda from "@/assets/trips/vrindavan.jpg";
-import taj from "../assets/trips/tajmahal.jpg";
-import ship from "../assets/trips/cruise.jpg";
-import manali from "../assets/trips/manali.jpg";
-import kantal1 from "../assets/trips/kantal1.png";
-import kantal2 from "../assets/trips/kantal2.png";
-import yulla1 from "../assets/trips/yulla1.avif";
-import yulla2 from "../assets/trips/yulla2.png";
-import kedarnath1 from "../assets/trips/kedarnath1.jpg";
-import kedarnath2 from "../assets/trips/kedarnath2.png";
-import auli1 from "../assets/trips/auli1.jpg";
-import auli2 from "../assets/trips/auli2.png";
-import rishikesh1 from "../assets/trips/rishikesh1.png";
-import rishikesh2 from "../assets/trips/rishikesh2.avif";
-import kantalimg  from "../assets/images/kantal trek.jpg";
-import kashmir from "../assets/images/kashmir tour.jpg";
-import business from "../assets/images/business.webp";
-import maldives from "../assets/images/business.webp";
+import taj from "@/assets/trips/tajmahal.jpg";
+import ship from "@/assets/trips/cruise.jpg";
+import manali from "@/assets/trips/manali.jpg";
+import kantal1 from "@/assets/trips/kantal1.png";
+import kantal2 from "@/assets/trips/kantal2.png";
+import yulla1 from "@/assets/trips/yulla1.avif";
+import yulla2 from "@/assets/trips/yulla2.png";
+import kedarnath1 from "@/assets/trips/kedarnath1.jpg";
+import kedarnath2 from "@/assets/trips/kedarnath2.png";
+import auli1 from "@/assets/trips/auli1.jpg";
+import auli2 from "@/assets/trips/auli2.png";
+import rishikesh1 from "@/assets/trips/rishikesh1.png";
+import rishikesh2 from "@/assets/trips/rishikesh2.avif";
+import kantalimg  from "@/assets/images/kantal trek.jpg";
+import kashmir from "@/assets/images/kashmir tour.jpg";
+import business from "@/assets/images/business.webp";
+import maldives from "@/assets/images/business.webp";
 
 
 

@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { passports } from "../../data/passports";
+import { passports } from "@/data/passports";
 
 export default function PassportDetail() {
   const { country } = useParams();

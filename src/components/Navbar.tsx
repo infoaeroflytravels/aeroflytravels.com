@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logoo from "../assets/img/LOGO12.png";
-import aero from "../assets/img/aero.png";
+import logoo from "@/assets/img/LOGO12.png";
+import aero from "@/assets/img/aero.png";
 
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);

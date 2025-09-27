@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { passports } from "../../data/passports";
+import { passports } from "@/data/passports";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";

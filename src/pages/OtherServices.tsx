@@ -1,7 +1,7 @@
 import React from 'react';
 import { Car, Hotel, Umbrella, Plane, Train, Shield, ArchiveRestore, User, Handshake, HeartHandshake, Scale } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
-import service from '../assets/images/as.jpg'; // Adjust the path as necessary
+import service from '@/assets/images/as.jpg'; // Adjust the path as necessary
 
 export function OtherServices() {
   const navigate = useNavigate();

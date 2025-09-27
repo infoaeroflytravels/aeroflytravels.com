@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileText, Shield, AlertCircle, HelpCircle } from 'lucide-react';
-import tour from '../assets/images/tour.jpg';
+import tour from '@/assets/images/tour.jpg';
 
 export function Terms() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Plane, Calendar, Users } from "lucide-react";
-import flight from "../assets/images/tg.jpg";
+import flight from "@/assets/images/tg.jpg";
 
 export function FlightBooking() {
   const [tripType, setTripType] = useState("round");

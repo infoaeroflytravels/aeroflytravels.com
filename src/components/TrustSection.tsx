@@ -10,7 +10,7 @@ import OTOAI from "@/assets/logo/otoai.svg";
 import IncredibleIndia from "@/assets/logo/Incredible-India-300x70.png";
 import MinistryofTourism from "@/assets/logo/mti.svg";
 import ISO from "@/assets/logo/iso.svg";
-import german from "@/assets/logo/german.png";
+import german from "@/assets/logo/iso.svg";
 import saudia from "@/assets/logo/saudia.png";
 import Thai from "@/assets/logo/thai.png";
 import singapore from "@/assets/logo/singapore.png";

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/about</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/visas</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/blog</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/careers</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/contact</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/Gallery</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/faq</loc>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/other-services</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/terms</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/packages</loc>
+    <priority>0.50</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/nppm/privacy</loc>
+    <priority>0.50</priority>
+  </url>
+
+  
+
+</urlset>

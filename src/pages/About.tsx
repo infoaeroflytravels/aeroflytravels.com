@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Building, Users, Target, Award, Phone } from "lucide-react";
-import about from "../assets/images/about.jpg";
+import about from "@/assets/images/about.jpg";
 
 // Animation Variants
 const fadeUp = {

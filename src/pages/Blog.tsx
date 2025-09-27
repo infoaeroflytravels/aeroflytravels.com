@@ -1,7 +1,7 @@
 import React from "react";
 import { Calendar, User } from "lucide-react";
 import { Link } from "react-router-dom";
-import blog from "../assets/images/blog.jpg"; // Adjust if needed
+import blog from "@/assets/images/blog.jpg"; // Adjust if needed
 
 export function Blog() {
   const posts = [

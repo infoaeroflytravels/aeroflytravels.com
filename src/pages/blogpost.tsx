@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { posts } from "../pages/blogData"; // fixed import path
+import { posts } from "@/pages/blogData"; // fixed import path
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();

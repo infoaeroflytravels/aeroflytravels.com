@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CheckCircle, Calendar } from "lucide-react";
-import dubai from "../../assets/visa/AE.webm";
+import dubai from "@/assets/visa/AE.webm";
 
 const DubaiVisaPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState("Employed");

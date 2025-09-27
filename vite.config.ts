@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { copyFileSync } from 'fs';
 import path, { resolve } from 'path';
 
+// Plugin to copy static files like sitemap and robots
 const copyStaticFiles = () => {
   return {
     name: 'copy-static-files',
@@ -18,15 +19,16 @@ const copyStaticFiles = () => {
 };
 
 export default defineConfig({
-  base: "/nppm/",
+  base: "/nppm/", // 👈 important for deployment path on Render
   plugins: [react(), copyStaticFiles()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),  // 👈 add alias
+      "@": path.resolve(__dirname, "./src"), // 👈 use @ for src imports
     },
   },
   build: {
     outDir: "dist",
+    chunkSizeWarningLimit: 1000, // 👈 suppress >500KB warnings
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -40,7 +42,7 @@ export default defineConfig({
     }
   },
   server: {
-    host: true, // expose to LAN
+    host: true, // expose to LAN for testing
     port: 5173,
     allowedHosts: [
       'localhost',

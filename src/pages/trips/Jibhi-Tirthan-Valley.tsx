@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import IMG from "../../assets/trips/VRINDAVAN.jpg";
+import IMG from "../../assets/trips/vrindavan.jpg";
 import agra from "../../assets/trips/tajmahal.jpg";
 import {
   CheckCircle,

@@ -13,7 +13,7 @@ import srilanka from "../assets/img/srilanka.jpg";
 import ctt from "../assets/trips/chopta1.jpg";
 import msk from "../assets/trips/manali.jpg";
 import jtv from "../assets/trips/jibhi1.jpg";
-import vrinda from "../assets/trips/vrindavan.jpg";
+import vrinda from "@/assets/trips/vrindavan.jpg";
 import taj from "../assets/trips/tajmahal.jpg";
 import ship from "../assets/trips/cruise.jpg";
 import manali from "../assets/trips/manali.jpg";
@@ -30,7 +30,7 @@ import rishikesh2 from "../assets/trips/rishikesh2.avif";
 import kantalimg  from "../assets/images/kantal trek.jpg";
 import kashmir from "../assets/images/kashmir tour.jpg";
 import business from "../assets/images/business.webp";
-import maldives from "../assets/trips/maldives.jpg";
+import maldives from "../assets/images/business.webp";
 
 
 

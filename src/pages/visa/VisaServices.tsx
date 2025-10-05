@@ -1,27 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { Globe, FileCheck, Clock, DollarSign, Search } from "lucide-react";
-import visa from "../../assets/images/visa.jpg";
-import ae from "../../assets/trips/AE.webp";
-import tr from "../../assets/visa/GR.png";
-import sg from "../../assets/visa/HK.webp";
-import de from "../../assets/visa/HK.webp";
-import hk from "../../assets/visa/HK.webp";
-import sa from "../../assets/visa/JP.png";
-import qa from "../../assets/visa/JP.png";
-import th from "../../assets/visa/Thailand.avif";
-import ch from "../../assets/visa/switzerland.webp";
-import us from "../../assets/visa/US.webp";
-import uk from "../../assets/visa/GB.webp";
-import ca from "../../assets/visa/CA.png";
-import au from "../../assets/visa/AU.png";
-import fr from "../../assets/visa/FR.webp";
-import it from "../../assets/visa/IT.png";
-import om from "../../assets/visa/OM.webp";
-import jp from "../../assets/visa/JP.png";
-import kr from "../../assets/visa/KR.png";
-import my from "../../assets/visa/MY.webp";
-import nl from "../../assets/visa/EG.webp";
-import za from "../../assets/visa/ES.png";
+import visa from "@/assets/images/visa.jpg";
+import ae from "@/assets/trips/AE.webp";
+import tr from "@/assets/visa/GR.png";
+import sg from "@/assets/visa/HK.webp";
+import de from "@/assets/visa/HK.webp";
+import hk from "@/assets/visa/HK.webp";
+import sa from "@/assets/visa/JP.png";
+import qa from "@/assets/visa/JP.png";
+import th from "@/assets/visa/Thailand.avif";
+import ch from "@/assets/visa/switzerland.webp";
+import us from "@/assets/visa/US.webp";
+import uk from "@/assets/visa/GB.webp";
+import ca from "@/assets/visa/CA.png";
+import au from "@/assets/visa/AU.png";
+import fr from "@/assets/visa/FR.webp";
+import it from "@/assets/visa/IT.png";
+import om from "@/assets/visa/OM.webp";
+import jp from "@/assets/visa/JP.png";
+import kr from "@/assets/visa/KR.png";
+import my from "@/assets/visa/MY.webp";
+import nl from "@/assets/visa/EG.webp";
+import za from "@/assets/visa/ES.png";
+import vn from "@/assets/visa/VN.webp";
+
+
 
 export function VisaServices() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -97,6 +100,7 @@ export function VisaServices() {
   const trips = [
     { title: "United Arab Emirates", image: ae, visaCount: "53K", date: "27 Aug, 07:21 AM", link: "/nppm/visa/uae-visa" },
     { title: "Thailand", image: th, visaCount: "32K", date: "23 Aug, 02:05 PM", link: "/nppm/visa/thailand-visa" },
+    { title: "Vietnam", image: vn, visaCount: "32K", date: "23 Aug, 02:05 PM", link: "/nppm/visa/vietnam-visa" },
     { title: "Switzerland", image: ch, visaCount: "30K", date: "22 Sep, 12:00 AM", link: "/nppm/visa/switzerland-visa" },
     { title: "United States", image: us, visaCount: "28K", date: "10 Sep, 11:00 AM", link: "/nppm/visa/united-states-visa" },
     { title: "United Kingdom", image: uk, visaCount: "25K", date: "15 Sep, 03:45 PM", link: "/nppm/visa/united-kingdom-visa" },

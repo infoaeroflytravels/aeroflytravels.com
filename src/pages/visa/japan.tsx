@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Calendar } from "lucide-react";
-import Malaysia from "@/assets/visa/video/TH.webm";
+import Japan from "@/assets/visa/video/TH.webm";
 import thaiimg from "@/assets/visa/img/th.png";
 import iata from "@/assets/visa/logo/iatalogo.avif";
 import tg from "@/assets/visa/logo/tglogo.svg";
@@ -14,7 +14,7 @@ import AeroFeePopover from "@/components/aerofee";
 import Calendarr from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-const MalaysiaVisaPage: React.FC = () => {
+const JapanVisaPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState("Employed");
 
   const [country, setCountry] = useState<string>("Your Country");
@@ -74,14 +74,14 @@ const MalaysiaVisaPage: React.FC = () => {
             poster={thaiimg}
             className="w-full h-[600px] object-cover"
           >
-            <source src={Malaysia} type="video/webm" />
-            <img src={thaiimg} alt="Malaysia" className="w-full h-[750px] object-cover" />
+            <source src={Japan} type="video/webm" />
+            <img src={thaiimg} alt="Japan" className="w-full h-[750px] object-cover" />
           </video>
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
             <h1 className="text-5xl font-bold text-white mb-4">
-              Malaysia Digital Arrival Card (TDAC)
+              Japan Digital Arrival Card (TDAC)
             </h1>
 
             {/* ✅ Guarantee Pill with random minutes */}
@@ -186,7 +186,7 @@ const MalaysiaVisaPage: React.FC = () => {
 
             {/* Visa Info */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h2 className="text-xl font-bold underline mb-4">Malaysia Visa Information</h2>
+              <h2 className="text-xl font-bold underline mb-4">Japan Visa Information</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <div>
                   <p className="text-sm text-gray-500">Visa Type</p>
@@ -265,7 +265,7 @@ const MalaysiaVisaPage: React.FC = () => {
 
             {/* Visa Requirements */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-lg font-bold underline mb-4">Malaysia Visa Requirements</h3>
+              <h3 className="text-lg font-bold underline mb-4">Japan Visa Requirements</h3>
               <div className="flex items-center gap-3 border rounded-lg p-3 bg-gray-50">
                 <span>📘</span>
                 <p className="font-medium">Passport</p>
@@ -298,7 +298,7 @@ const MalaysiaVisaPage: React.FC = () => {
 
       {/* Visa Process */}
       <div className="bg-white rounded-xl shadow-md p-6">
-        <h3 className="text-lg font-bold underline mb-4">How Malaysia Visa Process Works</h3>
+        <h3 className="text-lg font-bold underline mb-4">How Japan Visa Process Works</h3>
         <div className="space-y-4">
           <div className="border-l-4 border-indigo-600 pl-4">
             <p className="font-semibold text-indigo-600">Step 1: Apply with Aerofly</p>
@@ -578,5 +578,5 @@ const MalaysiaVisaPage: React.FC = () => {
   );
 };
 
-export default MalaysiaVisaPage;
+export default JapanVisaPage;
 

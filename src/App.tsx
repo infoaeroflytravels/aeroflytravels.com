@@ -40,11 +40,11 @@ import RajasthanTourPage from "./pages/trips/Rajasthan";
 import UttarakhandTourPage from "./pages/trips/Uttarakhand";
 import MeghalayaTourPage from "./pages/trips/Meghalaya";
 import LehTourPage from "./pages/trips/Leh-Ladakh"; 
-
+import VeitnamVisa from "./pages/visa/Vietnam";
 import ThailandVisa from "./pages/visa/thailand";
 import UAEVisa from "./pages/visa/UnitedArabEmirates";
 
-import Japanvisa from "./pages/visa/japan-visa";
+import Japanvisa from "./pages/visa/japan";
 import Hongkongvisa from "./pages/visa/HongKong";
 
 import SwitzerlandVisa from "./pages/visa/Switzerland";
@@ -149,6 +149,7 @@ function App() {
 
 
             <Route path="/visa/thailand-visa" element={<ThailandVisa />} />
+            <Route path="/visa/vietnam-visa" element={<VeitnamVisa />} />
             <Route path="/visa/uae-visa" element={<UAEVisa />} />
             <Route path="/visa/japan-visa" element={<Japanvisa />} />
             <Route path="/visa/hongkong-visa" element={<Hongkongvisa />} />

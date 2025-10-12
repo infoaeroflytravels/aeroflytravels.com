@@ -7,7 +7,7 @@ const PriceBreakdown: React.FC = () => {
     <div className="relative w-full space-y-6">
       <VisaBanner />
         
-      <div className="pt-16 relative flex h-full w-full flex-col place-items-center justify-center gap-4 rounded-2xl border bg-white border-t">
+      <div className="pt-16 relative flex h-full w-full flex-col place-items-center justify-center gap-8 rounded-2xl border bg-white border-t">
         <div className="relative z-[2] w-full select-none px-2">
           <div className="transition w-full rounded-xl">
             <div className="flex cursor-pointer flex-row items-center gap-2 px-2">

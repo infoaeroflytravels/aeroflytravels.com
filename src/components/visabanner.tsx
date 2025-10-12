@@ -5,7 +5,7 @@ const VisaBanner: React.FC = () => {
     <div className="absolute -inset-x-2 -top-6 z-[1] h-16 md:h-[74px]">
       <div className="relative h-full w-full">
         <div className="flex h-full w-full items-center gap-2 rounded-2xl px-7 text-sm font-normal md:text-base bg-primary">
-          <div className="flex w-full items-center gap-2 transition-all duration-1000 ease-out">
+          <div className="flex w-full items-center gap-2 transition-all font-bold duration-1000 ease-out">
             <svg
               className="h-[30px] lg:h-[44px]"
               fill="none"

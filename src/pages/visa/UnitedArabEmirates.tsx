@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Calendar } from "lucide-react";
+
 import AE from "@/assets/visa/assets/AE/ae.webm";
 import alt from "@/assets/visa/assets/AE/alt.webp";
 import iata from "@/assets/visa/logo/iatalogo.avif";
 import god from "@/assets/visa/assets/AE/god.webp";
 import mofa from "@/assets/visa/assets/AE/mofa.webp";
 import ey from "@/assets/visa/assets/AE/ethihad.webp";
-import sheild from "@/assets/visa/logo/atlys-protect.png";
+
 import Price from "@/components/pricebreakdown";
 import Calendarr from "@/components/visacalender";
 

@@ -3,10 +3,12 @@ import Calendarr from "@/components/visacalender";
 
 const VisaTimeline: React.FC = () => {
   const [showCalendar, setShowCalendar] = useState(false);
+  const [selectedDate, setSelectedDate] = useState("15 October");
 
   return (
     <div className="-mx-2 hidden pr-2 md:-mx-6 md:pl-6 md:pr-10 lg:block">
-      {/* Header Section */}
+      
+      {/* ====== HEADING ====== */}
       <div className="relative z-[2] flex gap-2">
         <span className="relative ml-[0.5px] flex h-5 w-5 items-center justify-center pt-3">
           <span className="absolute inline-flex h-full w-full rounded-full bg-primary/30"></span>
@@ -24,13 +26,13 @@ const VisaTimeline: React.FC = () => {
       {/* Vertical connector line */}
       <div className="-mt-2 ml-2.5 h-12 border-l border-gray-200"></div>
 
-      {/* Main Card */}
+      {/* ====== CARD SECTION ====== */}
       <div className="flex flex-col">
         <div className="relative pl-6">
           <div className="absolute left-2.5 top-0 h-1/2 w-3.5 rounded-bl-2xl border-l border-b border-gray-200"></div>
 
           <div className="relative z-[2] rounded-2xl border border-primary/40 p-5 pl-4 pt-6 shadow-xl">
-            <p className="absolute left-4 top-0 -translate-y-1/2 rounded-full bg-[#EFF0FF] px-3 py-1.5 text-xs font-medium text-primary">
+            <p className="absolute left-4 top-0 -translate-y-1/2 rounded-full bg-[#EFF0FF] px-3 py-1.5 text-sm font-bold text-primary">
               in 3 days
             </p>
 
@@ -45,22 +47,22 @@ const VisaTimeline: React.FC = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   className="text-primary"
                 >
-                  {/* SVG path omitted for brevity */}
+                  <circle cx="16" cy="16" r="15" stroke="currentColor" />
                 </svg>
                 <p className="font-semibold md:text-lg">
-                  15 Oct 2025 at 05:07 PM
+                  {selectedDate} at 05:07 PM
                 </p>
               </div>
 
-              {/* Bottom Button */}
-              <div className="flex flex-col-reverse justify-between pl-8 pr-6 md:flex-row md:pl-8 md:pr-0">
+              {/* ===== View Timeline Button ===== */}
+              <div className="relative w-full">
                 <button
                   onClick={() => setShowCalendar(!showCalendar)}
-                  className="flex items-center gap-1 text-sm text-primary"
+                  className="flex items-center gap-1 text-sm font-bold text-primary sticky bottom-4 left-0 z-50 px-8 py-2 rounded-lg"
                 >
                   <span>View Timeline</span>
                   <span
-                    className="-ml-0.5 mt-0.5 text-primary"
+                    className="text-primary"
                     style={{ transform: "rotate(180deg)" }}
                   >
                     <svg

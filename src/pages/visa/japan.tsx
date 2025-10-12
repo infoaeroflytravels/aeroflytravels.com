@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Calendar } from "lucide-react";
-import Japan from "@/assets/visa/video/TH.webm";
-import thaiimg from "@/assets/visa/img/th.png";
+import Japan from "@/assets/visa/assets/JP/jp.webm";
+import altp from "@/assets/visa/assets/JP/altjp.webp";
 import iata from "@/assets/visa/logo/iatalogo.avif";
-import tg from "@/assets/visa/logo/tglogo.svg";
+import jpta from "@/assets/visa/assets/JP/JTA.webp"
+import jpvisa from "@/assets/visa/assets/JP/jpevisa.webp";
 import tggov from "@/assets/visa/logo/tggov.png";
 import sheild from "@/assets/visa/logo/atlys-protect.png";
 
@@ -13,6 +14,7 @@ import AeroFeePopover from "@/components/aerofee";
 
 import Calendarr from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { j } from "node_modules/framer-motion/dist/types.d-Cjd591yU";
 
 const JapanVisaPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState("Employed");
@@ -71,11 +73,11 @@ const JapanVisaPage: React.FC = () => {
             loop
             muted
             playsInline
-            poster={thaiimg}
+            poster={altp}
             className="w-full h-[600px] object-cover"
           >
             <source src={Japan} type="video/webm" />
-            <img src={thaiimg} alt="Japan" className="w-full h-[750px] object-cover" />
+            <img src={altp} alt="Japan" className="w-full h-[750px] object-cover" />
           </video>
 
           {/* Overlay */}
@@ -277,7 +279,7 @@ const JapanVisaPage: React.FC = () => {
               <h3 className="text-lg font-bold underline mb-6">Partners We Work With</h3>
 
               <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 justify-items-center">
-                {[iata, tg, tggov].map((logo, index) => (
+                {[iata, jpta, jpvisa].map((logo, index) => (
                   <div
                     key={index}
                     className="border rounded-xl p-6 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-all duration-200"

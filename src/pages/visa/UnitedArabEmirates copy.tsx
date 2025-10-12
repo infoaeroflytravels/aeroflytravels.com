@@ -8,9 +8,8 @@ import mofa from "@/assets/visa/assets/AE/mofa.webp";
 import ey from "@/assets/visa/assets/AE/ethihad.webp";
 import sheild from "@/assets/visa/logo/atlys-protect.png";
 import Price from "@/components/pricebreakdown";
-import Calendarr from "@/components/visacalender";
 
-import Guaranteed from "@/components/visatimeline";
+import Calendarr from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 
@@ -198,17 +197,11 @@ const DubaiVisaPage: React.FC = () => {
               </div>
             </div>
 
-
             {/* Visa Info */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <div>
-                <h2 className="text-lg font-semibold lg:text-3xl">
-                  <span> Dubai Visa Information</span>
-                </h2>
-                <div className="mt-1.5 w-12 border border-primary transition-all duration-500"></div>
-              </div>
+              <h2 className="text-xl font-bold underline mb-4">Dubai Visa Information</h2>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {/* Visa Type */}
                 <div className="flex items-start gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#E5EFFF]">
@@ -451,9 +444,21 @@ const DubaiVisaPage: React.FC = () => {
 
 
             {/* Guaranteed Visa */}
-           
-            <Guaranteed />
-            
+            <div className="bg-white rounded-xl shadow-md p-6">
+              <h3 className="text-lg font-bold underline mb-4">Get a Guaranteed Visa on</h3>
+              <div className="border rounded-xl p-4 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 text-indigo-600" />
+                  <p className="font-medium">{selectedDate}</p>
+                </div>
+                <button className="bg-indigo-600 text-white text-sm px-4 py-1 rounded-lg">
+                  Selected
+                </button>
+              </div>
+              <a href="#" className="text-sm text-blue-600 underline mt-2 inline-block">
+                View Timeline
+              </a>
+            </div>
 
             {/* Documents */}
             <div className="bg-white rounded-xl shadow-md p-6">

@@ -23,7 +23,8 @@ export default defineConfig({
   plugins: [react(), copyStaticFiles()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // 👈 use @ for src imports
+      "@": path.resolve(__dirname, "./src"),
+      "$": path.resolve(__dirname, "./src/assets/visa"), // 👈 use $ for assets imports
     },
   },
   build: {

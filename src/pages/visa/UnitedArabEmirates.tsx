@@ -490,14 +490,7 @@ const DubaiVisaPage: React.FC = () => {
 
 
 
-            {/* Visa Requirements */}
-            <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-lg font-bold underline mb-4">Dubai Visa Requirements</h3>
-              <div className="flex items-center gap-3 border rounded-lg p-3 bg-gray-50">
-                <span>📘</span>
-                <p className="font-medium">Passport</p>
-              </div>
-            </div>
+         
 
             {/* Partners */}
             <div className="bg-white rounded-xl shadow-md p-6">
@@ -523,32 +516,157 @@ const DubaiVisaPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Visa Process */}
-            <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-lg font-bold underline mb-4">How Dubai Visa Process Works</h3>
-              <div className="space-y-4">
-                <div className="border-l-4 border-indigo-600 pl-4">
-                  <p className="font-semibold text-indigo-600">Step 1: Apply with Aerofly</p>
-                  <p className="text-sm text-gray-600">
-                    Submit your documents on Aerofly — only pay government fee.
-                  </p>
-                </div>
-                <div className="border-l-4 border-indigo-600 pl-4">
-                  <p className="font-semibold text-indigo-600">Step 2: Processing</p>
-                  <p className="text-sm text-gray-600">
-                    Aerofly reviews and submits your application to Dubai immigration.
-                  </p>
-                </div>
-                <div className="border-l-4 border-indigo-600 pl-4">
-                  <p className="font-semibold text-indigo-600">Step 3: Visa Delivered</p>
-                  <p className="text-sm text-gray-600">
-                    Receive your visa on time. If delayed, no Aero fee. If rejected, 100% refund.
-                  </p>
-                </div>
-              </div>
-            </div>
+
+
+            <div className="space-y-6">
+  <h2 className="text-lg font-semibold lg:text-2xl">
+    <span>How Dubai Visa Process Works</span>
+  </h2>
+  <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
+</div>
+
+<div className="relative ml-7 max-w-xl space-y-5">
+  {/* Vertical connector */}
+  <div className="absolute -left-[26px] bottom-10 top-7 w-0.5 rounded-full bg-gray-200 animate-reveal-timeline-hiw"></div>
+
+  {/* Step 1 */}
+  <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+    <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+      <div className="size-[10px] rounded-full bg-primary"></div>
+    </div>
+    <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+      Step 1
+    </p>
+    <div className="flex w-full flex-col gap-1">
+      <p className="text-base font-medium md:text-lg">Apply on Aerofly</p>
+      <p className="text-sm text-gray-500 md:text-base">
+        Submit your documents on Aerofly — only pay government fee.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 2 */}
+  <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+    <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+      <div className="size-[10px] rounded-full bg-primary"></div>
+    </div>
+    <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+      Step 2
+    </p>
+    <div className="flex w-full flex-col gap-1">
+      <p className="text-base font-medium md:text-lg">Your Documents Are Verified</p>
+      <p className="text-sm text-gray-500 md:text-base">
+        Aerofly verifies your documents and submits to Immigration.
+      </p>
+    </div>
+  </div>
+
+  {/* Step 3 */}
+  <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+    <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+      <div className="size-[10px] rounded-full bg-primary"></div>
+    </div>
+    <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+      Step 3
+    </p>
+
+    <div className="flex w-full flex-col gap-1">
+      <p className="text-base font-medium md:text-lg">Your Visa Gets Processed</p>
+      <p className="text-sm text-gray-500 md:text-base">
+        We work with Immigration to ensure you get your Visa on time.
+      </p>
+
+      {/* Subtimeline */}
+      <div className="pt-3">
+        <div className="relative space-y-6 rounded-2xl border p-5">
+          {/* Sub-step 1 */}
+          <div className="relative">
+            <div className="absolute bottom-0 left-0.5 top-5 rounded-t-full border border-primary bg-primary"></div>
+            <p className="flex items-center text-[13px] text-gray-700">
+              <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+              <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
+                Application has been sent to the immigration supervisor
+              </span>
+            </p>
+            <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
+              <span>8 Jan, 5:45 AM</span>
+              <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
+                On time
+              </span>
+            </p>
           </div>
 
+          {/* Sub-step 2 */}
+          <div className="relative">
+            <div className="absolute -top-6 bottom-11 left-0.5 rounded-b-full border border-primary bg-primary"></div>
+            <p className="flex items-center text-[13px] text-gray-700">
+              <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+              <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
+                Application has been sent to internal intelligence
+              </span>
+            </p>
+            <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
+              <span>8 Jan, 5:45 AM</span>
+              <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
+                On time
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Step 4 */}
+  <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+    <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+      <div className="size-[10px] rounded-full bg-primary"></div>
+    </div>
+    <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+      Step 4
+    </p>
+
+    <div className="flex w-full flex-col gap-1">
+      <p className="pb-2 text-base font-medium md:text-lg">
+        Get Your <span>Visa</span> <span>on</span>
+        <br className="block md:hidden" />
+        <span className="bg-gradient-to-r from-primary to-[#53BCFF] bg-clip-text font-bold text-transparent">
+          20 Oct, 07:57 PM
+        </span>
+      </p>
+
+      {/* Visa Status Results */}
+      <div className="space-y-[22px] rounded-2xl border p-5 md:space-y-4">
+        <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+          <p className="flex-1 text-[13px] text-gray-700">
+            Your visa is approved on time
+          </p>
+          <p className="w-full rounded-lg bg-[#60C69726] px-4 py-1.5 text-center text-[13px] font-medium capitalize text-[#12B76A] md:w-52">
+            Pay Aero Fee
+          </p>
+        </div>
+
+        <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+          <p className="text-[13px] text-gray-700 md:max-w-60 md:text-balance">
+            Your visa is approved even one second after the promised time
+          </p>
+          <p className="w-full rounded-lg bg-[#FDB0221A] px-4 py-1.5 text-center text-[13px] font-medium capitalize text-[#A87D18] md:w-44">
+            Aero Fee Waived
+          </p>
+        </div>
+
+        <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+          <p className="flex-1 text-[13px] text-gray-700">Your visa is rejected</p>
+          <p className="w-full rounded-lg bg-[#D100501A] px-4 py-1.5 text-center text-[13px] font-medium text-[#D11000] md:w-52">
+            Government Fee Refunded
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
           {/* Right Column - Price */}
           <div>
 
@@ -591,7 +709,7 @@ const DubaiVisaPage: React.FC = () => {
                           Skip the Long Immigration Lines
                         </h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                          Glide through immigration with a pre-approved TDAC with Atlys
+                          Glide through immigration with a pre-approved TDAC with Aerofly
                         </p>
                       </div>
                     </div>

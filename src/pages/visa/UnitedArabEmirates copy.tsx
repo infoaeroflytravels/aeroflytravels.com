@@ -836,6 +836,135 @@ const DubaiVisaPage: React.FC = () => {
           </div>
 
 
+
+
+
+            {/* Separation between cards */}
+            <div className=" bg-white rounded-xl shadow-md p-6 mt-6">
+              <h2 className="text-lg font-semibold lg:text-2xl">
+                <span>Why Aerofly?</span>
+              </h2>
+              <div className="mt-2 w-5 border-b-2 border-primary transition-all duration-500"></div>
+            </div>
+            <div className=" ">
+              <div className="my-auto max-w-4xl">
+                <div className="flex flex-col gap-1">
+                  {/* Item 1 */}
+                  <div className="border-b bg-white px-0 py-3 first:pt-0 last:border-none last:pb-0 bg-white rounded-xl shadow-md p-6 mt-6">
+                    <div className="flex items-start">
+                      <div className="rounded-lg bg-white-100 p-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="28"
+                          fill="none"
+                          stroke="#0535d3ff"
+                          strokeWidth="2.20"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M23 4v6h-7"></path>
+                          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg>
+                      </div>
+                      <div className="ml-6">
+                        <h3 className="mb-2 text-sm font-bold text-gray-800">
+                          Skip the Long Immigration Lines
+                        </h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                          Glide through immigration with a pre-approved TDAC with Aerofly
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  {/* Item 2 */}
+                  <div className="border-b bg-white px-0 py-4 first:pt-0 last:border-none last:pb-0 bg-white rounded-xl shadow-md p-6 mt-6">
+                    <div className="flex items-start">
+                      <div className="rounded-lg bg-white-100 p-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          fill="none"
+                          stroke="#0535d3ff"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                      </div>
+                      <div className="ml-5">
+                        <h3 className="mb-2 text-sm font-bold text-gray-800">Hassle-Free Application</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                          We handle the paperwork and complexity — so you don’t have to
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 3 */}
+                  <div className="border-b bg-white px-0 py-4 first:pt-0 last:border-none last:pb-0 bg-white rounded-xl shadow-md p-6 mt-6">
+                    <div className="flex items-start">
+                      <div className="rounded-lg bg-white-100 p-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          fill="none"
+                          stroke="#0535d3ff"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                      </div>
+                      <div className="ml-5">
+                        <h3 className="mb-2 text-sm font-bold text-gray-800">Always On Time</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                          Guaranteed delivery before your travel date
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Item 4 */}
+                  <div className="border-b bg-white px-0 py-4 first:pt-0 last:border-none last:pb-0  bg-white rounded-xl shadow-md p-6 mt-6" >
+                    <div className="flex items-start">
+                      <div className="rounded-lg bg-white-100 p-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="28"
+                          height="50"
+                          fill="none"
+                          stroke="#0535d3ff"
+                          strokeWidth="2.54"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                      </div>
+                      <div className="ml-5">
+                        <h3 className="mb-2 text-sm font-bold text-gray-800">Risk-Free Guarantee</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                          Delayed? No Aero fee. Rejected? Full refund
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section >
       </div >

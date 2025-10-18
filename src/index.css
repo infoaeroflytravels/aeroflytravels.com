@@ -328,3 +328,38 @@ html::-webkit-scrollbar-track {
   scrollbar-width: none;
 }
 
+
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+  }
+}
+.glow {
+  animation: softGlow 2s infinite ease-in-out;
+  border-radius: 50%;
+}
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 84, 84, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 84, 84, 1);
+  }
+}
+.pulse {
+  animation: pulseGlow 2s infinite ease-in-out;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+

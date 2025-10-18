@@ -153,7 +153,7 @@ const VisaTimelineCalendar: React.FC = () => {
                             expanded
                               ? "border-primary bg-primary/10 scale-105 shadow-lg font-bold text-primary"
                               : todayMatch
-                              ? "border-[#EEE0C1] bg-[#FFF7E9]"
+                              ? "border-[#ff5454ff] bg-[#f3bdbdff]"
                               : visaMatch
                               ? "border-primary bg-primary text-white"
                               : "border-transparent"

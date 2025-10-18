@@ -1,13 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calendarr from "@/components/visacalender";
 
 const VisaTimeline: React.FC = () => {
-  // track which card is open: null | 15 | 19
-  const [openCard, setOpenCard] = useState<number | null>(null);
+  const [openCard, setOpenCard] = useState<number | null>(15); // default open/selected
+  const [visaDate, setVisaDate] = useState<string>("");
+  const [daysLeft, setDaysLeft] = useState<number>(0);
 
-  // toggle logic
+  // Function to calculate +3 days
+  const calculateVisaDetails = () => {
+    const today = new Date();
+    const visaArrivalDate = new Date(today);
+    visaArrivalDate.setDate(today.getDate() + 3);
+
+    const diffTime = visaArrivalDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    const formattedDate = visaArrivalDate.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "long",
+    });
+
+    setVisaDate(formattedDate);
+    setDaysLeft(diffDays);
+  };
+
+  useEffect(() => {
+    calculateVisaDetails();
+    const interval = setInterval(calculateVisaDetails, 60000); // refresh every minute
+    return () => clearInterval(interval);
+  }, []);
+
+  // handlers
   const handleToggle = (cardId: number) => {
     setOpenCard(openCard === cardId ? null : cardId);
+  };
+
+  const handleHoverIn = (cardId: number) => {
+    setOpenCard(cardId);
+  };
+
+  const handleHoverOut = () => {
+    setOpenCard(null);
   };
 
   return (
@@ -27,24 +60,22 @@ const VisaTimeline: React.FC = () => {
         </div>
       </div>
 
-      {/* Vertical connector line */}
+      {/* Vertical line */}
       <div className="-mt-2 ml-2.5 h-12 border-l border-gray-200"></div>
 
       {/* ====== CARD SECTION ====== */}
       <div className="flex flex-col gap-6">
-
-        {/* ----------- CARD 1 : 15 October ----------- */}
         <VisaCard
-          date="15 October"
-          daysLeft="3"
-          time="05:07 PM"
+          id={15}
+          date={visaDate}
+          daysLeft={daysLeft.toString()}
           isOpen={openCard === 15}
           onToggle={() => handleToggle(15)}
+          onHoverIn={() => handleHoverIn(15)}
+          onHoverOut={handleHoverOut}
         >
-          {openCard === 15 && <Calendarr  />}
+          <Calendarr />
         </VisaCard>
-
-        
       </div>
     </div>
   );
@@ -52,45 +83,60 @@ const VisaTimeline: React.FC = () => {
 
 /* ============ REUSABLE CARD COMPONENT ============ */
 interface VisaCardProps {
+  id: number;
   date: string;
   daysLeft: string;
-  time: string;
   isOpen: boolean;
   onToggle: () => void;
+  onHoverIn: () => void;
+  onHoverOut: () => void;
   children?: React.ReactNode;
 }
 
 const VisaCard: React.FC<VisaCardProps> = ({
   date,
   daysLeft,
-  time,
   isOpen,
   onToggle,
+  onHoverIn,
+  onHoverOut,
   children,
 }) => (
-  <div className="relative pl-6">
+  <div
+    className="relative pl-6"
+    onMouseEnter={onHoverIn}
+    onMouseLeave={onHoverOut}
+  >
+    {/* Connector line */}
     <div className="absolute left-2.5 top-0 h-1/2 w-3.5 rounded-bl-2xl border-l border-b border-gray-200"></div>
 
-    <div className="relative z-[2] rounded-2xl border border-primary/40 p-5 pl-4 pt-6 shadow-xl transition-all">
+    <div className="relative z-[2] rounded-2xl border border-primary/40 p-5 pl-4 pt-6 shadow-xl transition-all duration-300 hover:shadow-2xl">
       <p className="absolute left-4 top-0 -translate-y-1/2 rounded-full bg-[#EFF0FF] px-3 py-1.5 text-sm font-bold text-primary">
         in {daysLeft} days
       </p>
 
       <div style={{ height: 60 }}>
         <div className="flex items-center gap-2">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 33 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-primary"
-          >
-            <circle cx="16" cy="16" r="15" stroke="currentColor" />
-          </svg>
-          <p className="font-semibold md:text-lg">
-            {date} at {time}
-          </p>
+          {/* ✅ Circle indicator */}
+          <div className="relative flex items-center justify-center">
+            {isOpen && (
+              <span className="absolute h-7 w-7 rounded-full bg-primary/30 animate-ping" />
+            )}
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-primary"
+            >
+              <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
+              <circle cx="12" cy="12" r="5" fill="currentColor" />
+            </svg>
+          </div>
+
+          {/* ✅ Date only (no time) */}
+          <p className="font-semibold md:text-lg">{date}</p>
         </div>
 
         {/* ===== View Timeline Button ===== */}
@@ -124,8 +170,12 @@ const VisaCard: React.FC<VisaCardProps> = ({
             </span>
           </button>
 
-          {/* Render Calendar only when open */}
-          {isOpen && <div className="mt-4">{children}</div>}
+          {/* Calendar shows on hover or toggle */}
+          {isOpen && (
+            <div className="mt-4 animate-fadeIn">
+              {children}
+            </div>
+          )}
         </div>
       </div>
     </div>

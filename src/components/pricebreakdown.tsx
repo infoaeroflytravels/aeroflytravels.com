@@ -1,6 +1,8 @@
 import React from "react";
 import VisaBanner from "@/components/visabanner";
 import AeroProtect from "@/components/aeroprotect";
+import AeroFeePopover from "@/components/aerofee";
+import GovernmentFeePopover from "@/components/govtfee";
 
 const PriceBreakdown: React.FC = () => {
   return (
@@ -43,7 +45,7 @@ const PriceBreakdown: React.FC = () => {
 
                   <div className="relative px-2">
                     <button className="outline-none underline" type="button">
-                      Government fee
+                      <GovernmentFeePopover />
                     </button>
                   </div>
 
@@ -89,7 +91,7 @@ const PriceBreakdown: React.FC = () => {
 
                   <div className="relative px-2">
                     <button className="outline-none underline" type="button">
-                      Aero Fees
+                       <AeroFeePopover />
                     </button>
                   </div>
 

@@ -29,7 +29,7 @@ const VisaBanner: React.FC = () => {
             <span className="text-md text-white">
               Get Your <span>Visa</span>
               <span>&nbsp;in&nbsp;</span>
-              <span>2 days</span>
+              <span>3 days</span>
             </span>
           </div>
         </div>

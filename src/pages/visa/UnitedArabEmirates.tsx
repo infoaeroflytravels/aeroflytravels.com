@@ -98,7 +98,7 @@ const DubaiVisaPage: React.FC = () => {
               />
 
               <span className="flex flex-row items-center  text-white text-md">
-                Visa guaranteed in 2 days {randomMinutes} minutes
+                Visa guaranteed in 3 days  
               </span>
             </div>
 
@@ -121,7 +121,7 @@ const DubaiVisaPage: React.FC = () => {
         </section>
 
         {/* Main Content */}
-        <section className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mt-4 px-2">
+        <section className="max-w-7xl mx-auto grid md:grid-cols-3 gap-9 mt-6 px-1">
 
 
           {/* Left Column */}
@@ -136,9 +136,9 @@ const DubaiVisaPage: React.FC = () => {
                 </svg>Aerofly is authorized by the Government of Dubai</div></div>
 
             {/* Badge */}
-            <div className="flex w-full flex-row items-center bg-white-100 gap-4 rounded-lg border p-4 md:gap-3">
+            <div className="flex w-full flex-row items-center bg-white gap-4 rounded-2xl  shadow-xl border p-4 md:gap-3">
               {/* Rating with leaves */}
-              <div className="flex flex-row items-center  bg-white-100 justify-center">
+              <div className="flex flex-row items-center  bg-grey justify-center">
                 <img
                   alt="leaves"
                   loading="lazy"
@@ -161,8 +161,8 @@ const DubaiVisaPage: React.FC = () => {
 
 
               {/* Text info */}
-              <div>
-                <p className="text-lg font-bold  bg-white-100 md:text-small md:font-medium">
+              <div className=" bg-white-1000">
+                <p className="text-lg font-bold  bg-white-1000 md:text-small md:font-medium">
                   Loved and Trusted by 1.25L Indians
                 </p>
 
@@ -200,12 +200,13 @@ const DubaiVisaPage: React.FC = () => {
 
 
             {/* Visa Info */}
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <div className="bg-white   p-6  gap-2 rounded-2xl  shadow-xl border">
               <div>
                 <h2 className="text-lg font-semibold lg:text-3xl">
                   <span> Dubai Visa Information</span>
                 </h2>
                 <div className="mt-1.5 w-12 border border-primary transition-all duration-500"></div>
+                <div className="my-6"></div>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -456,7 +457,7 @@ const DubaiVisaPage: React.FC = () => {
 
 
             {/* Documents */}
-            <div className="bg-white rounded-xl shadow-md p-6">
+            <div className="bg-white   p-6 rounded-2xl  shadow-xl border">
               <div className="space-y-6" id="required-documents">
                 {/* ====== Heading ====== */}
                 <div>
@@ -495,8 +496,14 @@ const DubaiVisaPage: React.FC = () => {
             </div>
 
             {/* Partners */}
-            <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="text-lg font-bold underline mb-6">Partners We Work With</h3>
+            <div className="bg-white   p-6 rounded-2xl  shadow-xl border">
+              <div>
+                  <h2 className="text-lg font-semibold lg:text-2xl">
+                    <span>Partners We Work With</span>
+                  </h2>
+                  <div className="mt-2.5 w-12 border border-primary transition-all duration-500 my-4"></div>
+                </div>
+             
 
               <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 justify-items-center">
                 {[iata, god, mofa, ey].map((logo, index) => (
@@ -517,161 +524,164 @@ const DubaiVisaPage: React.FC = () => {
 
 
 
-            <div className="mb-2">
-      <div>
-        <h2 className="text-lg font-semibold lg:text-2xl">
-          <span>All 7 Emirates with 1 Visa</span>
-        </h2>
-        <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
-      </div>
+            <div className="mb-4">
+              <div>
+                <h2 className="text-lg font-semibold lg:text-2xl">
+                  <span>All 7 Emirates with 1 Visa</span>
+                </h2>
+                <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
+              
 
-      <div className="flex flex-col gap-2 md:gap-4 mt-8">
-        <div className="grid grid-cols-12 gap-2 md:gap-4">
-          <div
-            className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-            style={{ height: "min(25vw, 240px)" }}
-          >
-            <img
-              alt="dubai"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="41.67vw"
-              srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-              src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-              <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Dubai</h3>
-            </div>
-          </div>
+              <div className="flex flex-col gap-1 md:gap-4 mt-4">
+                <div className="grid grid-cols-12 gap-1 ">
+                  <div
+                    className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                    style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
+                  >
+                    <img
+                      alt="dubai"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="31.67vw"
+                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
+                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
+                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                      <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Dubai</h3>
+                    </div>
+                  </div>
 
-          <div className="col-span-7 grid grid-cols-2 gap-2 md:gap-4">
-            <div
-              className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-              style={{ height: "min(25vw, 240px)" }}
-            >
-              <img
-                alt="abu-dhabi"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="29.17vw"
-                srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Abu Dhabi</h3>
+                  <div className="col-span-7 grid grid-cols-2 gap-1 md:gap-4">
+                    <div
+                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                      style={{ height: "min(25vw, 240px)" }}
+                    >
+                      <img
+                        alt="abu-dhabi"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="29.17vw"
+                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
+                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Abu Dhabi</h3>
+                      </div>
+                    </div>
+
+                    <div
+                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                      style={{ height: "min(25vw, 240px)" }}
+                    >
+                      <img
+                        alt="sharjah"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="29.17vw"
+                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
+                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Sharjah</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-4 gap-2 md:gap-4">
+                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                    <img
+                      alt="ras-al-khaimah"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="25vw"
+                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
+                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
+                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ras Al Khaimah</h3>
+                    </div>
+                  </div>
+
+                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                    <img
+                      alt="fujairah"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="25vw"
+                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
+                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
+                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Fujairah</h3>
+                    </div>
+                  </div>
+
+                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                    <img
+                      alt="umm-al-quwain"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="25vw"
+                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
+                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
+                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Umm Al Quwain</h3>
+                    </div>
+                  </div>
+
+                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                    <img
+                      alt="ajman"
+                      loading="lazy"
+                      decoding="async"
+                      data-nimg="fill"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="25vw"
+                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
+                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
+                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ajman</h3>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>Partners We Work With
             </div>
 
-            <div
-              className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-              style={{ height: "min(25vw, 240px)" }}
-            >
-              <img
-                alt="sharjah"
-                loading="lazy"
-                decoding="async"
-                data-nimg="fill"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="29.17vw"
-                srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Sharjah</h3>
-              </div>
+            <div className="my-6">
+              
+
+
+
             </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-2 md:gap-4">
-          <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-            <img
-              alt="ras-al-khaimah"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="25vw"
-              srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-              src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-              <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ras Al Khaimah</h3>
-            </div>
-          </div>
-
-          <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-            <img
-              alt="fujairah"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="25vw"
-              srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-              src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-              <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Fujairah</h3>
-            </div>
-          </div>
-
-          <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-            <img
-              alt="umm-al-quwain"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="25vw"
-              srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-              src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-              <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Umm Al Quwain</h3>
-            </div>
-          </div>
-
-          <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-            <img
-              alt="ajman"
-              loading="lazy"
-              decoding="async"
-              data-nimg="fill"
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="25vw"
-              srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-              src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-              style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-              <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ajman</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-
-
-
-
-            
 
           </div>
           {/* Right Column - Price */}
-          <div className="bg-transparent rounded-xl  p-1">
+          <div className="bg-transparent rounded-xl  p-1 my-8">
             <Price />
 
             <div className="space-y-4 bg-white rounded-xl shadow-md p-6 mt-6">
@@ -679,161 +689,169 @@ const DubaiVisaPage: React.FC = () => {
                 <span>How Dubai Visa Process Works.</span>
               </h2>
               <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
-            
 
-             <div className="relative ml-7 max-w-xl space-y-5">
-              {/* Vertical connector */}
-              <div className="absolute -left-[26px] bottom-10 top-7 w-0.5 rounded-full bg-gray-200 animate-reveal-timeline-hiw"></div>
 
-              {/* Step 1 */}
-              <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
-                <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
-                  <div className="size-[10px] rounded-full bg-primary"></div>
-                </div>
-                <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
-                  Step 1
-                </p>
-                <div className="flex w-full flex-col gap-1">
-                  <p className="text-base font-medium md:text-lg">Apply on Aerofly</p>
-                  <p className="text-sm text-gray-500 md:text-base">
-                    Submit your documents on Aerofly — only pay government fee.
+              <div className="relative ml-7 max-w-xl space-y-5">
+                {/* Vertical connector */}
+                <div className="absolute -left-[26px] bottom-10 top-7 w-0.5 rounded-full bg-gray-200 animate-reveal-timeline-hiw"></div>
+
+                {/* Step 1 */}
+                <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+                  <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+                    <div className="size-[10px] rounded-full bg-primary"></div>
+                  </div>
+                  <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+                    Step 1
                   </p>
+                  <div className="flex w-full flex-col gap-1">
+                    <p className="text-base font-medium md:text-lg">Apply on Aerofly</p>
+                    <p className="text-sm text-gray-500 md:text-base">
+                      Submit your documents on Aerofly — only pay government fee.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Step 2 */}
-              <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
-                <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
-                  <div className="size-[10px] rounded-full bg-primary"></div>
-                </div>
-                <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
-                  Step 2
-                </p>
-                <div className="flex w-full flex-col gap-1">
-                  <p className="text-base font-medium md:text-lg">Your Documents Are Verified</p>
-                  <p className="text-sm text-gray-500 md:text-base">
-                    Aerofly verifies your documents and submits to Immigration.
+                {/* Step 2 */}
+                <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+                  <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+                    <div className="size-[10px] rounded-full bg-primary"></div>
+                  </div>
+                  <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+                    Step 2
                   </p>
+                  <div className="flex w-full flex-col gap-1">
+                    <p className="text-base font-medium md:text-lg">Your Documents Are Verified</p>
+                    <p className="text-sm text-gray-500 md:text-base">
+                      Aerofly verifies your documents and submits to Immigration.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Step 3 */}
-              <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
-                <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
-                  <div className="size-[10px] rounded-full bg-primary"></div>
-                </div>
-                <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
-                  Step 3
-                </p>
-
-                <div className="flex w-full flex-col gap-1">
-                  <p className="text-base font-medium md:text-lg">Your Visa Gets Processed</p>
-                  <p className="text-sm text-gray-500 md:text-base">
-                    We work with Immigration to ensure you get your Visa on time.
+                {/* Step 3 */}
+                <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+                  <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+                    <div className="size-[10px] rounded-full bg-primary"></div>
+                  </div>
+                  <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+                    Step 3
                   </p>
 
-                  {/* Subtimeline */}
-                  <div className="pt-3">
-                    <div className="relative space-y-6 rounded-2xl border p-5">
-                      {/* Sub-step 1 */}
-                      <div className="relative">
-                        <div className="absolute bottom-0 left-0.5 top-5 rounded-t-full border border-primary bg-primary"></div>
-                        <p className="flex items-center text-[13px] text-gray-700">
-                          <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
-                          <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
-                            Application has been sent to the immigration supervisor
-                          </span>
-                        </p>
-                        <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
-                          <span>8 Jan, 5:45 AM</span>
-                          <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
-                            On time
-                          </span>
-                        </p>
-                      </div>
+                  <div className="flex w-full flex-col gap-1">
+                    <p className="text-base font-medium md:text-lg">Your Visa Gets Processed</p>
+                    <p className="text-sm text-gray-500 md:text-base">
+                      We work with Immigration to ensure you get your Visa on time.
+                    </p>
 
-                      {/* Sub-step 2 */}
-                      <div className="relative">
-                        <div className="absolute -top-6 bottom-11 left-0.5 rounded-b-full border border-primary bg-primary"></div>
-                        <p className="flex items-center text-[13px] text-gray-700">
-                          <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
-                          <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
-                            Application has been sent to internal intelligence
-                          </span>
-                        </p>
-                        <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
-                          <span>8 Jan, 5:45 AM</span>
-                          <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
-                            On time
-                          </span>
-                        </p>
+                    {/* Subtimeline */}
+                    <div className="pt-3">
+                      <div className="relative space-y-6 rounded-2xl border p-5">
+                        {/* Sub-step 1 */}
+                        <div className="relative">
+                          <div className="absolute bottom-0 left-0.5 top-5 rounded-t-full border border-primary bg-primary"></div>
+                          <p className="flex items-center text-[13px] text-gray-700">
+                            <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                            <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
+                              Application has been sent to the immigration supervisor
+                            </span>
+                          </p>
+                          <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
+                            <span>8 Jan, 5:45 AM</span>
+                            <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
+                              On time
+                            </span>
+                          </p>
+                        </div>
+
+                        {/* Sub-step 2 */}
+                        <div className="relative">
+                          <div className="absolute -top-6 bottom-11 left-0.5 rounded-b-full border border-primary bg-primary"></div>
+                          <p className="flex items-center text-[13px] text-gray-700">
+                            <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"></span>
+                            <span className="ml-[18px] text-xs font-medium md:text-[13px] md:font-normal">
+                              Application has been sent to internal intelligence
+                            </span>
+                          </p>
+                          <p className="ml-6 mt-1 flex items-center gap-2 text-[13px] text-gray-700">
+                            <span>8 Jan, 5:45 AM</span>
+                            <span className="rounded bg-[#559E6A] px-1.5 text-[8px] font-semibold uppercase text-white">
+                              On time
+                            </span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Step 4 */}
-              <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
-                <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
-                  <div className="size-[10px] rounded-full bg-primary"></div>
-                </div>
-                <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
-                  Step 4
-                </p>
-
-                <div className="flex w-full flex-col gap-1">
-                  <p className="pb-2 text-base font-medium md:text-lg">
-                    Get Your <span>Visa</span> <span>on</span>
-                    <br className="block md:hidden" />
-                    {(() => {
-                      const date = new Date(); // you can replace this with your visa date
-                      const options: Intl.DateTimeFormatOptions = { day: "2-digit", month: "long" }; // "October" instead of "Oct"
-                      const formattedDate = date.toLocaleDateString("en-GB", options); // e.g. "21 October"
-                      const time = date.toLocaleTimeString("en-US", {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                        hour12: true,
-                      });
-                      return (
-                        <span className="bg-gradient-to-r from-primary to-[#53BCFF] bg-clip-text font-bold text-transparent">
-                          {`${formattedDate}, ${time}`}
-                        </span>
-                      );
-                    })()}
+                {/* Step 4 */}
+                <div className="relative space-y-1 rounded-2xl border px-5 pb-5 pt-3.5">
+                  <div className="absolute -left-[33px] top-6 flex size-4 items-center justify-center rounded-full border border-primary bg-white">
+                    <div className="size-[10px] rounded-full bg-primary"></div>
+                  </div>
+                  <p className="bg-gradient-to-r from-primary via-[#53BCFF] to-[#53BCFF] bg-clip-text font-bold text-transparent">
+                    Step 4
                   </p>
 
-                  {/* Visa Status Results */}
-                  <div className="space-y-[22px] rounded-2xl border p-5 md:space-y-4">
-                    <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
-                      <p className="flex-1 text-[13px] text-gray-700">
-                        Your visa is approved on time
-                      </p>
-                      <p className="w-full rounded-lg bg-[#60C69726] px-4 py-1.5 text-center text-[13px] font-medium capitalize text-[#12B76A] md:w-52">
-                        Pay Aero Fee
-                      </p>
-                    </div>
+                  <div className="flex w-full flex-col gap-1">
+                    <p className="pb-2 text-base font-medium md:text-lg">
+                      Get Your <span>Visa</span> <span>on </span>
+                      <br className="block md:hidden" />
+                      {(() => {
+                        // 🔹 Add +3 days to today
+                        const today = new Date();
+                        const visaDate = new Date(today);
+                        visaDate.setDate(today.getDate() + 3);
 
-                    <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
-                      <p className="text-[13px] text-gray-700 md:max-w-60 md:text-balance">
-                        Your visa is approved even one second after the promised time
-                      </p>
-                      <p className="w-full rounded-lg bg-[#FDB0221A] px-4 py-1.5 text-center text-[13px] font-medium capitalize text-[#A87D18] md:w-44">
-                        Aero Fee Waived
-                      </p>
-                    </div>
+                        // Format date → "21 October"
+                        const options: Intl.DateTimeFormatOptions = {
+                          day: "2-digit",
+                          month: "long",
+                        };
+                        const formattedDate = visaDate.toLocaleDateString("en-GB", options);
 
-                    <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
-                      <p className="flex-1 text-[13px] text-gray-700">Your visa is rejected</p>
-                      <p className="w-full rounded-lg bg-[#D100501A] px-4 py-1.5 text-center text-[13px] font-medium text-[#D11000] md:w-52">
-                        Government Fee Refunded
-                      </p>
+                        // Format time → "05:34 PM"
+
+                        return (
+                          <span className="bg-gradient-to-r from-primary to-[#53BCFF] bg-clip-text font-bold text-transparent">
+                            {`${formattedDate}`}
+                          </span>
+                        );
+                      })()}
+                    </p>
+
+
+
+                    {/* Visa Status Results */}
+                    <div className="space-y-[20px] rounded-2xl border p-2 md:space-y-2">
+                      <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+                        <p className="flex-1 text-[15px] text-gray-700">
+                          Your visa is approved on time
+                        </p>
+                        <p className="w-full rounded-lg bg-[#60C69726] px-4 py-2.5 text-center text-[13px] font-medium capitalize text-[#12B76A] md:w-40">
+                          Pay Aero Fee
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+                        <p className="text-[15px] text-gray-700 md:max-w-60 md:text-balance">
+                          Your visa is approved even one second after the promised time
+                        </p>
+                        <p className="w-full rounded-lg bg-[#FDB0221A] px-4 py-2.5 text-center text-[13px] font-medium capitalize text-[#A87D18] md:w-40">
+                          Aero Fee Waived
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col items-start gap-[7px] md:flex-row md:items-center md:justify-between">
+                        <p className="flex-1 text-[15px] text-gray-700">Your visa is rejected</p>
+                        <p className="rounded-lg bg-[#D100501A] px-0.2 py-2.5 text-center text-[13px] font-medium text-[#D11000] md:w-40">
+                          Govt. Fee Refunded
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
 
           </div>

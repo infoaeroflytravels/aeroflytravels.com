@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Calendarr from "@/components/visacalender";
 
 const VisaTimeline: React.FC = () => {
-  const [openCard, setOpenCard] = useState<number | null>(15); // default open/selected
+  const [openCard, setOpenCard] = useState<number | null>(null); // default open/selected
   const [visaDate, setVisaDate] = useState<string>("");
   const [daysLeft, setDaysLeft] = useState<number>(0);
 
@@ -44,7 +44,7 @@ const VisaTimeline: React.FC = () => {
   };
 
   return (
-    <div className="-mx-2 hidden pr-2 md:-mx-6 md:pl-6 md:pr-10 lg:block">
+    <div className=" bg-white   p-6 rounded-2xl  shadow-xl border">
       {/* ====== HEADING ====== */}
       <div className="relative z-[2] flex gap-2">
         <span className="relative ml-[0.5px] flex h-5 w-5 items-center justify-center pt-3">

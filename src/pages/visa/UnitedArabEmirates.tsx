@@ -12,6 +12,7 @@ import Calendarr from "@/components/visacalender";
 
 import Guaranteed from "@/components/visatimeline";
 import "react-calendar/dist/Calendar.css";
+import PriceBreakdown from "@/components/pricebreakdown";
 
 
 
@@ -682,8 +683,13 @@ const DubaiVisaPage: React.FC = () => {
           </div>
           {/* Right Column - Price */}
           <div className="bg-transparent rounded-xl  p-1 my-8">
-            <Price />
-
+            
+            <PriceBreakdown
+              destination="Dubai"
+              govtFee={6750}
+              aeroFee={1000}
+              aeroFeeDiscounted={0}
+/>
             <div className="space-y-4 bg-white rounded-xl shadow-md p-6 mt-6">
               <h2 className="text-lg font-semibold lg:text-2xl">
                 <span>How Dubai Visa Process Works.</span>

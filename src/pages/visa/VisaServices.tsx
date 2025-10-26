@@ -8,7 +8,7 @@ import de from "@/assets/visa/HK.webp";
 import hk from "@/assets/visa/HK.webp";
 import sa from "@/assets/visa/JP.png";
 import qa from "@/assets/visa/JP.png";
-import th from "@/assets/visa/Thailand.avif";
+import th from "@/assets/visa/assets/TH/Thailand.avif";
 import ch from "@/assets/visa/switzerland.webp";
 import us from "@/assets/visa/US.webp";
 import uk from "@/assets/visa/GB.webp";

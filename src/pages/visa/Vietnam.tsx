@@ -1,22 +1,32 @@
 import React, { useState, useEffect } from "react";
 
-import TG from "@/assets/visa/assets/TH/TH.webm";
-import alt from "@/assets/visa/assets/AE/alt.webp";
+import TG from "@/assets/visa/assets/VN/VN.webm";
+import alt from "@/assets/visa/assets/VN/VN.webp";
 import iata from "@/assets/visa/logo/iatalogo.avif";
-import god from "@/assets/visa/assets/AE/god.webp";
-import mofa from "@/assets/visa/assets/AE/mofa.webp";
-import ey from "@/assets/visa/assets/AE/ethihad.webp";
+import govt from "@/assets/visa/assets/VN/vnlogo.png";
+import thaiair from "@/assets/visa/assets/TH/tglogo.svg";
+import mti from "@/assets/visa/logo/mti.svg";
 
-import Price from "@/components/pricebreakdown";
-import Calendarr from "@/components/visacalender";
+
+
+import Hanoi from "@/assets/visa/assets/TH/th.png";
+import halongbay from "@/assets/visa/assets/TH/5krabi.webp";
+import hoChiMinhCity from "@/assets/visa/assets/TH/6udonthani.jpg";
+import PhuQuoc from "@/assets/visa/assets/TH/khonkhen.jpg";
+import daNang from "@/assets/visa/assets/TH/2phuket.jpeg";
+import ninhbinh from "@/assets/visa/assets/TH/3bangkok.webp";
+import HoiAn from "@/assets/visa/assets/TH/4kosomui.webp";
+
 
 import Guaranteed from "@/components/visatimeline";
 import "react-calendar/dist/Calendar.css";
+import PriceBreakdown from "@/components/pricebreakdown";
 
 
 
 
-const ThailandVisaPage: React.FC = () => {
+
+const VietnamVisaPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState("Employed");
 
   const [country, setCountry] = useState<string>("Your Country");
@@ -83,7 +93,7 @@ const ThailandVisaPage: React.FC = () => {
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
             <h1 className="text-5xl font-bold text-white mb-4">
-              Thailand Visa
+              Vietnam Visa
             </h1>
 
             {/* ✅ Guarantee Pill with random minutes */}
@@ -98,7 +108,7 @@ const ThailandVisaPage: React.FC = () => {
               />
 
               <span className="flex flex-row items-center  text-white text-md">
-                Visa guaranteed in 3 days  
+                Visa guaranteed in 3 days
               </span>
             </div>
 
@@ -133,7 +143,7 @@ const ThailandVisaPage: React.FC = () => {
                   <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#FBFBFB" stroke-linecap="round" stroke-dasharray="4 4"></rect>
                   <path d="M15 23.4636C15 23.4636 21.3709 20.2782 21.3709 15.5V9.1291L15 7.53638L8.62909 9.1291V15.5C8.62909 20.2782 15 23.4636 15 23.4636Z" fill="white" fill-opacity="0.22" stroke="#5057EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M13.2598 15.0896L14.6631 16.4931L17.6484 13.5078" stroke="#5057EA" stroke-width="2" stroke-linecap="round"></path>
-                </svg>Aerofly is authorized by the Government of Thailand</div></div>
+                </svg>Aerofly is authorized by the Government of Veitnam</div></div>
 
             {/* Badge */}
             <div className="flex w-full flex-row items-center bg-white gap-4 rounded-2xl  shadow-xl border p-4 md:gap-3">
@@ -203,7 +213,7 @@ const ThailandVisaPage: React.FC = () => {
             <div className="bg-white   p-6  gap-2 rounded-2xl  shadow-xl border">
               <div>
                 <h2 className="text-lg font-semibold lg:text-3xl">
-                  <span> Thailand Visa Information</span>
+                  <span> Veitnam E-Visa Visa Information</span>
                 </h2>
                 <div className="mt-1.5 w-12 border border-primary transition-all duration-500"></div>
                 <div className="my-6"></div>
@@ -411,6 +421,44 @@ const ThailandVisaPage: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Visa Info */}
+                <div className="relative flex flex-row items-center">
+                  <span>
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#E2E3FB]">
+                      <svg
+                        width="26"
+                        height="26"
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M25.1875 21.9376C25.1875 22.1531 25.1019 22.3598 24.9495 22.5121C24.7972 22.6645 24.5905 22.7501 24.375 22.7501H9.75C9.53451 22.7501 9.32785 22.6645 9.17548 22.5121C9.0231 22.3598 8.9375 22.1531 8.9375 21.9376C8.9375 21.7221 9.0231 21.5155 9.17548 21.3631C9.32785 21.2107 9.53451 21.1251 9.75 21.1251H24.375C24.5905 21.1251 24.7972 21.2107 24.9495 21.3631C25.1019 21.5155 25.1875 21.7221 25.1875 21.9376ZM22.5306 19.4697L4.59164 14.4464C3.73907 14.2055 2.98824 13.6932 2.45292 12.9873C1.9176 12.2813 1.62695 11.4201 1.625 10.5342V4.87512C1.62498 4.61762 1.68615 4.36381 1.80348 4.13459C1.92081 3.90538 2.09092 3.70732 2.29981 3.55676C2.5087 3.40619 2.75038 3.30742 3.00493 3.26859C3.25949 3.22975 3.51962 3.25197 3.76391 3.3334L4.31945 3.51825C4.43597 3.55696 4.54219 3.62158 4.63014 3.70725C4.7181 3.79292 4.78549 3.8974 4.82727 4.01285L5.90383 6.99575L8.9375 7.86004V4.87512C8.93748 4.61762 8.99866 4.36381 9.11598 4.13459C9.23331 3.90538 9.40342 3.70732 9.61231 3.55676C9.8212 3.40619 10.0629 3.30742 10.3174 3.26859C10.572 3.22975 10.8321 3.25197 11.0764 3.3334L11.632 3.51825C11.7419 3.55489 11.8427 3.61463 11.9277 3.69346C12.0127 3.77228 12.0798 3.86837 12.1245 3.97528L14.4097 9.42207L20.5888 11.1486C21.4431 11.3886 22.1957 11.9007 22.7325 12.6074C23.2692 13.314 23.5606 14.1765 23.5625 15.0639V18.6876C23.5625 18.813 23.5334 18.9367 23.4776 19.049C23.4217 19.1613 23.3407 19.2591 23.2408 19.3349C23.1408 19.4106 23.0247 19.4622 22.9015 19.4856C22.7783 19.509 22.6514 19.5035 22.5306 19.4697ZM21.9375 15.0639C21.9361 14.5313 21.761 14.0138 21.4387 13.5899C21.1165 13.1659 20.6647 12.8586 20.152 12.7147L13.5941 10.8866C13.476 10.8537 13.3669 10.7945 13.2749 10.7134C13.1829 10.6323 13.1104 10.5315 13.063 10.4184L10.7656 4.94317L10.5625 4.87512V8.93762C10.5626 9.06336 10.5335 9.1874 10.4775 9.29999C10.4215 9.41257 10.3402 9.51062 10.2398 9.58643C10.1395 9.66223 10.023 9.71372 9.89938 9.73684C9.77579 9.75996 9.64851 9.75407 9.52758 9.71965L5.05883 8.44606C4.93475 8.4105 4.82093 8.34589 4.72679 8.25758C4.63265 8.16927 4.56091 8.0598 4.5175 7.93825L3.4318 4.93504L3.25 4.87512V10.5342C3.25132 11.0659 3.4258 11.5827 3.74704 12.0063C4.06828 12.43 4.51879 12.7375 5.03039 12.8823L21.9375 17.6161V15.0639Z"
+                          fill="#5057EA"
+                        />
+                      </svg>
+                    </div>
+                  </span>
+
+                  <div className="group relative cursor-pointer pl-3">
+                    <p className="text-xs md:text-sm text-gray-500">Visa Accepted At</p>
+                    <p className="mt-0.5 whitespace-nowrap text-sm font-medium underline text-gray-800">
+                      All Ports of Entry
+                    </p>
+
+                    {/* Tooltip */}
+                    <div className="invisible absolute top-full z-10 mt-2 w-60 flex-col rounded-xl border bg-white p-4 shadow-xl group-hover:visible group-hover:flex lg:left-1/2 lg:-translate-x-1/2 left-0">
+                      <span className="pb-2 font-medium">
+                        Visa Accepted At: All Ports of Entry
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        Visa provided by Aerofly is valid at all airports of Vietnam.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+
 
                 {/* Method Info */}
                 <div className="relative flex flex-row items-center">
@@ -462,7 +510,7 @@ const ThailandVisaPage: React.FC = () => {
                 {/* ====== Heading ====== */}
                 <div>
                   <h2 className="text-lg font-semibold lg:text-2xl">
-                    <span>Thailand Visa Requirements</span>
+                    <span>Veitnam E-Visa Visa Requirements</span>
                   </h2>
                   <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
                 </div>
@@ -498,15 +546,15 @@ const ThailandVisaPage: React.FC = () => {
             {/* Partners */}
             <div className="bg-white   p-6 rounded-2xl  shadow-xl border">
               <div>
-                  <h2 className="text-lg font-semibold lg:text-2xl">
-                    <span>Partners We Work With</span>
-                  </h2>
-                  <div className="mt-2.5 w-12 border border-primary transition-all duration-500 my-4"></div>
-                </div>
-             
+                <h2 className="text-lg font-semibold lg:text-2xl">
+                  <span>Partners We Work With</span>
+                </h2>
+                <div className="mt-2.5 w-12 border border-primary transition-all duration-500 my-4"></div>
+              </div>
+
 
               <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 justify-items-center">
-                {[iata, god, mofa, ey].map((logo, index) => (
+                {[iata, govt, mti, thaiair].map((logo, index) => (
                   <div
                     key={index}
                     className="border rounded-xl p-6 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-all duration-200"
@@ -527,151 +575,153 @@ const ThailandVisaPage: React.FC = () => {
             <div className="mb-4">
               <div>
                 <h2 className="text-lg font-semibold lg:text-2xl">
-                  <span>All 7 Emirates with 1 Visa</span>
+                  <span>All 7 Vietnamese Destinations with 1 Visa</span>
                 </h2>
                 <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
-              
 
-              <div className="flex flex-col gap-1 md:gap-4 mt-4">
-                <div className="grid grid-cols-12 gap-1 ">
-                  <div
-                    className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                    style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
-                  >
-                    <img
-                      alt="Thailand"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="31.67vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Thailand</h3>
-                    </div>
-                  </div>
 
-                  <div className="col-span-7 grid grid-cols-2 gap-1 md:gap-4">
+                <div className="flex flex-col gap-1 md:gap-4 mt-4">
+                  <div className="grid grid-cols-12 gap-1 ">
                     <div
-                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                      style={{ height: "min(25vw, 240px)" }}
+                      className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                      style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
                     >
                       <img
-                        alt="abu-dhabi"
+                        alt="Hanoi"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
+                        sizes="31.67vw"
+                        srcSet={Hanoi}
+                        src={Hanoi}
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Abu Dhabi</h3>
+                        <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Hanoi</h3>
                       </div>
                     </div>
 
-                    <div
-                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                      style={{ height: "min(25vw, 240px)" }}
-                    >
+                    <div className="col-span-7 grid grid-cols-2 gap-1 md:gap-4">
+                      <div
+                        className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                        style={{ height: "min(25vw, 240px)" }}
+                      >
+                        <img
+                          alt="Ha Long Bay"
+                          loading="lazy"
+                          decoding="async"
+                          data-nimg="fill"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="29.17vw"
+                          srcSet={halongbay}
+                          src={halongbay}
+
+                          style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                          <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Ha Long Bay</h3>
+                        </div>
+                      </div>
+
+                      <div
+                        className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                        style={{ height: "min(25vw, 240px)" }}
+                      >
+                        <img
+                          alt="Ninh Binh"
+                          loading="lazy"
+                          decoding="async"
+                          data-nimg="fill"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="29.17vw"
+                          srcSet={ninhbinh}
+                          src={ninhbinh}
+                          style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                          <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Ninh Binh</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-4 gap-2 md:gap-4">
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                       <img
-                        alt="sharjah"
+                        alt="daNang"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
+                        sizes="25vw"
+                        srcSet={daNang}
+                        src={daNang}
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Sharjah</h3>
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Da Nang</h3>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-4 gap-2 md:gap-4">
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="ras-al-khaimah"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ras Al Khaimah</h3>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Ho Chi Minh City"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={hoChiMinhCity}
+                        src={hoChiMinhCity}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ho Chi Minh City</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="fujairah"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Fujairah</h3>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Phu Quoci"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={PhuQuoc}
+                        src={PhuQuoc}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Phu Quoc</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="umm-al-quwain"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Umm Al Quwain</h3>
-                    </div>
-                  </div>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Hoi An"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={HoiAn}
+                        src={HoiAn}
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="ajman"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ajman</h3>
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Hoi An</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>Partners We Work With
             </div>
 
             <div className="my-6">
-              
+
 
 
 
@@ -682,11 +732,15 @@ const ThailandVisaPage: React.FC = () => {
           </div>
           {/* Right Column - Price */}
           <div className="bg-transparent rounded-xl  p-1 my-8">
-            <Price />
-
+            <PriceBreakdown
+              destination="Vietnam"
+              govtFee={2300}
+              aeroFee={1000}
+              aeroFeeDiscounted={400}
+            />
             <div className="space-y-4 bg-white rounded-xl shadow-md p-6 mt-6">
               <h2 className="text-lg font-semibold lg:text-2xl">
-                <span>How Thailand Visa Process Works.</span>
+                <span>How Veitnam E-Visa Visa Process Works.</span>
               </h2>
               <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
 
@@ -861,5 +915,5 @@ const ThailandVisaPage: React.FC = () => {
   );
 };
 
-export default ThailandVisaPage;
+export default VietnamVisaPage;
 

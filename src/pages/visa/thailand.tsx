@@ -6,13 +6,25 @@ import iata from "@/assets/visa/logo/iatalogo.avif";
 import govt from "@/assets/visa/assets/TH/tggov.png";
 import thaiair from "@/assets/visa/assets/TH/tglogo.svg";
 import mti from "@/assets/visa/logo/mti.svg";
+import tthai from "@/assets/visa/assets/TH/th.png";
+import krabi from "@/assets/visa/assets/TH/5krabi.webp";
+import udonThani from "@/assets/visa/assets/TH/6udonthani.jpg";
+import khonKaen from "@/assets/visa/assets/TH/khonkhen.jpg";
+import phuket from "@/assets/visa/assets/TH/2phuket.jpeg";
+import bangkok from "@/assets/visa/assets/TH/3bangkok.webp";
+import kosomui from "@/assets/visa/assets/TH/4kosomui.webp";
 
-import Price from "@/components/pricebreakdown";
-import Calendarr from "@/components/visacalender";
+
+
+
+
+
+
 
 import Guaranteed from "@/components/visatimeline";
 import "react-calendar/dist/Calendar.css";
 import PriceBreakdown from "@/components/pricebreakdown";
+
 
 
 
@@ -528,7 +540,7 @@ const ThailandVisaPage: React.FC = () => {
             <div className="mb-4">
               <div>
                 <h2 className="text-lg font-semibold lg:text-2xl">
-                  <span>All 7 Emirates with 1 Visa</span>
+                  <span>All 7 Thai Wonders with 1 Visa</span>
                 </h2>
                 <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
               
@@ -546,8 +558,8 @@ const ThailandVisaPage: React.FC = () => {
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="31.67vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
+                      srcSet= {tthai}
+                      src= {tthai}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -561,14 +573,15 @@ const ThailandVisaPage: React.FC = () => {
                       style={{ height: "min(25vw, 240px)" }}
                     >
                       <img
-                        alt="abu-dhabi"
+                        alt="Bangkok"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
+                        srcSet= {bangkok}
+                        src = {bangkok}
+
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -581,14 +594,14 @@ const ThailandVisaPage: React.FC = () => {
                       style={{ height: "min(25vw, 240px)" }}
                     >
                       <img
-                        alt="sharjah"
+                        alt="Phuket"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
+                        srcSet= {phuket}
+                        src = {phuket}
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -601,14 +614,14 @@ const ThailandVisaPage: React.FC = () => {
                 <div className="grid grid-cols-4 gap-2 md:gap-4">
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="ras-al-khaimah"
+                      alt="Koh Samui"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
+                      srcSet= {kosomui}
+                      src= {kosomui}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -618,14 +631,14 @@ const ThailandVisaPage: React.FC = () => {
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="fujairah"
+                      alt="Krabi"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
+                      srcSet= {krabi}
+                      src= {krabi}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -635,14 +648,14 @@ const ThailandVisaPage: React.FC = () => {
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="umm-al-quwain"
+                      alt="Udon Thani"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
+                      srcSet={udonThani}
+                      src={udonThani} 
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
@@ -652,14 +665,15 @@ const ThailandVisaPage: React.FC = () => {
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="ajman"
+                      alt="Khon Kaen"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
+                      srcSet={khonKaen}
+                      src={khonKaen}
+                      
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">

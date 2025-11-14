@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm</loc>
+    <loc>https://aeroflytravels.github.io/en-IN</loc>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/about</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/about</loc>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/visas</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/visas</loc>
     <priority>0.80</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/blog</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/blog</loc>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/careers</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/careers</loc>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/contact</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/contact</loc>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/Gallery</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/Gallery</loc>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/faq</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/faq</loc>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/other-services</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/insurance</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://aeroflytravels.github.io/en-IN/terms</loc>
     <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/terms</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/packages</loc>
     <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://aeroflytravels.github.io/nppm/packages</loc>
-    <priority>0.50</priority>
-  </url>
-
-  <url>
-    <loc>https://aeroflytravels.github.io/nppm/privacy</loc>
+    <loc>https://aeroflytravels.github.io/en-IN/privacy</loc>
     <priority>0.50</priority>
   </url>
 

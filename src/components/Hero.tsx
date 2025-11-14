@@ -16,7 +16,7 @@ export function Hero() {
   });
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="pt-16 relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <img
         src={Heroo}

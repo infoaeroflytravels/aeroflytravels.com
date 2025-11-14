@@ -26,9 +26,9 @@ const localIP = getLocalIP();
 
 console.log(`
 VITE + NGROK Dev Server
-  ➜  Local:   http://localhost:5173/nppm/
-  ➜  Network: http://${localIP}:5173/nppm/
-  ➜  Public:  ${url}/nppm/
+  ➜  Local:   http://localhost:5173/en-IN/
+  ➜  Network: http://${localIP}:5173/en-IN/
+  ➜  Public:  ${url}/en-IN/
 `);
 
 // keep alive

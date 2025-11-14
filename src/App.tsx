@@ -14,7 +14,7 @@ import { Careers } from "./pages/Careers";
 import { FAQ } from "./pages/Cancellation & Refund Policy";
 import { Privacy } from "./pages/Privacy";
 import { Terms } from "./pages/Terms";
-import { OtherServices } from "./pages/OtherServices";
+import { Insurance } from "./pages/Insurance";
 import BlogPost from "./pages/blogpost";
 import Gallery from "./pages/gallery";
 import ServiceDetails from "./pages/service";
@@ -103,20 +103,22 @@ function App() {
   }
 
   return (
-    <Router basename="/nppm/">
+    <Router basename="/en-IN/">
       <SchemaMarkup />
       <div className="min-h-screen flex flex-col bg-background">
         <Navbar />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<><Hero /><TrustSection /></>} />
-            <Route path="/nppm/" element={<Navigate to="/" replace />} />
+            <Route path="/en-IN/" element={<Navigate to="/" replace />} />
             <Route path="/flights" element={<FlightBooking />} />
             <Route path="/visas" element={<VisaServices />} />
             <Route path="/packages" element={<TourPackages />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
-            <Route path="/other-services" element={<OtherServices />} />
+            <Route path="/insurance" element={<Insurance />} />
+            <Route path="/other-services" element={<Navigate to="/insurance" replace />} />
+            <Route path="/Other-Services" element={<Navigate to="/insurance" replace />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/careers" element={<Careers />} />

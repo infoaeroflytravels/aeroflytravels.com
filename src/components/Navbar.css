@@ -1,10 +1,19 @@
-.navbar-transparent {
-  background: transparent;
+/* Keep navbar fixed at the top */
+.navbar-transparent,
+.navbar-dark {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* keep it above everything */
   transition: background 0.4s;
 }
 
+
+
+
 .navbar-dark {
-  background: rgba(30, 41, 59, 0.92); /* dark semi-transparent */
+  background: rgba(255, 255, 255, 0.92); /* dark semi-transparent */
   transition: background 0.4s;
 }
 

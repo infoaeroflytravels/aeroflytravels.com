@@ -1,9 +1,9 @@
 {
-  "name": "nppm",
+  "name": "en-IN",
   "private": true,
   "version": "0.0.1",
   "type": "module",
-  "homepage": "https://AeroflyTravels.github.io/nppm",
+  "homepage": "https://AeroflyTravels.github.io/en-IN",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -73,12 +73,12 @@
   "description": "React + Vite project",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AeroflyTravels/nppm.git"
+    "url": "git+https://github.com/AeroflyTravels/en-IN.git"
   },
   "keywords": [],
   "author": "Rudr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AeroflyTravels/nppm/issues"
+    "url": "https://github.com/AeroflyTravels/en-IN/issues"
   }
 }

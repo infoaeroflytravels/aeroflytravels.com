@@ -19,7 +19,7 @@ const copyStaticFiles = () => {
 };
 
 export default defineConfig({
-  base: "/nppm/", // 👈 important for deployment path on Render
+  base: "/en-IN/", // 👈 important for deployment path on Render
   plugins: [react(), copyStaticFiles()],
   resolve: {
     alias: {
@@ -29,7 +29,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    chunkSizeWarningLimit: 1000, // 👈 suppress >500KB warnings
+    chunkSizeWarningLimit: 5000, // 👈 suppress >500KB warnings
     rollupOptions: {
       output: {
         manualChunks: (id) => {

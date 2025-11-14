@@ -6,7 +6,7 @@ import aero from "@/assets/img/aero.png";
 export function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
@@ -21,8 +21,9 @@ export function Navbar() {
   return (
     <header>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 shadow-md "bg-[#d9ff00d9]" : "bg-grey"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50  duration-500 ${
+    scrollPosition > 50 ? "bg-white shadow-lg backdrop-blur-md" : "bg-transparent"
+  }`}
       >
         <div className="max-w-full mx-auto px-6 sm:px-8">
           <div className="flex justify-between h-20 sm:h-24 items-center">
@@ -67,36 +68,36 @@ export function Navbar() {
                 </button>
 
                 {isServicesOpen && (
-  <div
-    className="absolute left-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 
+                  <div
+                    className="absolute left-0 mt-2 bg-white/10 backdrop-blur-md border border-white/20 
                rounded-xl shadow-xl z-[600] animate-fadeSlide p-2 flex flex-col space-y-2"
-  >
-    <Link
-      to="/flights"
-      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-    >
-      <span className="mr-2">✈</span> Flights
-    </Link>
-    <Link
-      to="/packages"
-      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-    >
-      <span className="mr-2">🌍</span> Tours
-    </Link>
-    <Link
-      to="/visas"
-      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-    >
-      <span className="mr-2">🛂</span> Visa
-    </Link>
-    <Link
-      to="/Other-Services"
-      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
-    >
-      <span className="mr-2">🛡</span> Insurance
-    </Link>
-  </div>
-)}
+                  >
+                    <Link
+                      to="/flights"
+                      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+                    >
+                      <span className="mr-2">✈</span> Flights
+                    </Link>
+                    <Link
+                      to="/packages"
+                      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+                    >
+                      <span className="mr-2">🌍</span> Tours
+                    </Link>
+                    <Link
+                      to="/visas"
+                      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+                    >
+                      <span className="mr-2">🛂</span> Visa
+                    </Link>
+                    <Link
+                      to="/insurance"
+                      className="flex items-center px-3 py-2 text-white hover:bg-white/20 rounded-lg transition"
+                    >
+                      <span className="mr-2">🛡</span> Insurance
+                    </Link>
+                  </div>
+                )}
 
               </li>
 
@@ -109,9 +110,9 @@ export function Navbar() {
                   About
                 </Link>
               </li>
-              <li> 
+              <li>
                 <Link
-                  to= "/gallery/"
+                  to="/gallery/"
                   className="px-4 py-2 font-semibold transition-colors"
                   style={{ color: navTextColor }}
                 >
@@ -174,9 +175,8 @@ export function Navbar() {
 
         {/* ✅ Mobile Dropdown Menu with animation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-500 ${
-            isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-500 ${isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="bg-black/90 backdrop-blur-md text-white px-6 py-4 space-y-3">
             <Link
@@ -198,11 +198,10 @@ export function Navbar() {
               </button>
 
               <div
-                className={`pl-4 mt-2 space-y-2 overflow-hidden transition-all duration-500 ${
-                  isMobileServicesOpen
+                className={`pl-4 mt-2 space-y-2 overflow-hidden transition-all duration-500 ${isMobileServicesOpen
                     ? "max-h-60 opacity-100"
                     : "max-h-0 opacity-0"
-                }`}
+                  }`}
               >
                 <Link
                   to="/flights"
@@ -235,7 +234,7 @@ export function Navbar() {
                   🛂 Visa
                 </Link>
                 <Link
-                  to="/Other-Services"
+                  to="/insurance"
                   className="block hover:text-cyan-400"
                   onClick={() => {
                     setIsMobileMenuOpen(false);

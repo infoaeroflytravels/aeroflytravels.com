@@ -1,22 +1,39 @@
 import React, { useState, useEffect } from "react";
+const TG = "https://media.atlys.com/b2c/clp/country-landing-page-videos/MY.mp4?tr=f-webm";
 
-import AE from "@/assets/visa/assets/AE/ae.webm";
-import alt from "@/assets/visa/assets/AE/alt.webp";
-import iata from "@/assets/visa/logo/iatalogo.avif";
-import god from "@/assets/visa/assets/AE/god.webp";
-import mofa from "@/assets/visa/assets/AE/mofa.webp";
-import ey from "@/assets/visa/assets/AE/ethihad.webp";
+const iata = "https://images.prismic.io/atlys/d5504196-40e8-41ba-a58d-768ccab8807d_iata.png?auto=compress,format&rect=0,0,356,240&w=356&h=240";
+const govt = "https://images.prismic.io/atlys/c0a839c2-7b1c-4dc1-9943-3b23119d9b99_Malaysia+e-visa+logo.png?auto=compress,format"
+const mtii = "https://images.prismic.io/atlys/03371eec-d29b-4f73-b75e-eccb218fe9aa_Malaysia_tourism_board_logo.png?auto=compress,format&rect=10,7,339,339&w=360&h=360";
+import mti from "@/assets/visa/logo/mti.svg";
+const tthai = "https://images.prismicea0-38e8-4e29-85e1-dba77e6447ab_image+%285%29.png?auto=compress,format";
+const xyz = "https://images.prismic.io/atlys/0d38ce80-0a52-460e-aa34-f9c72fa7a762_Hong+Kong+ministry+of+foreign+affairs..png?auto=compress,format";
 
-import Price from "@/components/pricebreakdown";
-import Calendarr from "@/components/visacalender";
+import krabi from "@/assets/visa/assets/TH/5krabi.webp";
+import udonThani from "@/assets/visa/assets/TH/6udonthani.jpg";
+import khonKaen from "@/assets/visa/assets/TH/khonkhen.jpg";
+import phuket from "@/assets/visa/assets/TH/2phuket.jpeg";
+import bangkok from "@/assets/visa/assets/TH/3bangkok.webp";
+import kosomui from "@/assets/visa/assets/TH/4kosomui.webp";
+
+
+
+
+
+
+const alt = "https://media.atlys.com/b2c/clp/country-landing-page/tr:w-1024,h-683,q-60,f-avif/MY/fall/default";
+
+
+
+
 
 import Guaranteed from "@/components/visatimeline";
 import "react-calendar/dist/Calendar.css";
+import PriceBreakdown from "@/components/pricebreakdown";
 
 
 
 
-const DubaiVisaPage: React.FC = () => {
+const SingaporeVisaPage: React.FC = () => {
   const [selectedProfile, setSelectedProfile] = useState("Employed");
 
   const [country, setCountry] = useState<string>("Your Country");
@@ -76,14 +93,14 @@ const DubaiVisaPage: React.FC = () => {
             poster={alt}
             className="w-full h-[600px] object-cover"
           >
-            <source src={AE} type="video/webm" />
-            <img src={alt} alt="AE" className="w-full h-[750px] object-cover" />
+            <source src={TG} type="video/webm" />
+            <img src={alt} alt="TG" className="w-full h-[750px] object-cover" />
           </video>
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
             <h1 className="text-5xl font-bold text-white mb-4">
-              Dubai Visa
+              Singapore Visa
             </h1>
 
             {/* ✅ Guarantee Pill with random minutes */}
@@ -98,7 +115,7 @@ const DubaiVisaPage: React.FC = () => {
               />
 
               <span className="flex flex-row items-center  text-white text-md">
-                Visa guaranteed in 3 days  
+                Visa guaranteed in  1 Hour
               </span>
             </div>
 
@@ -133,7 +150,7 @@ const DubaiVisaPage: React.FC = () => {
                   <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#FBFBFB" stroke-linecap="round" stroke-dasharray="4 4"></rect>
                   <path d="M15 23.4636C15 23.4636 21.3709 20.2782 21.3709 15.5V9.1291L15 7.53638L8.62909 9.1291V15.5C8.62909 20.2782 15 23.4636 15 23.4636Z" fill="white" fill-opacity="0.22" stroke="#5057EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M13.2598 15.0896L14.6631 16.4931L17.6484 13.5078" stroke="#5057EA" stroke-width="2" stroke-linecap="round"></path>
-                </svg>Aerofly is authorized by the Government of Dubai</div></div>
+                </svg>Aerofly is authorized by the Government of Singapore</div></div>
 
             {/* Badge */}
             <div className="flex w-full flex-row items-center bg-white gap-4 rounded-2xl  shadow-xl border p-4 md:gap-3">
@@ -203,7 +220,7 @@ const DubaiVisaPage: React.FC = () => {
             <div className="bg-white   p-6  gap-2 rounded-2xl  shadow-xl border">
               <div>
                 <h2 className="text-lg font-semibold lg:text-3xl">
-                  <span> Dubai Visa Information</span>
+                  <span> Singapore Visa Information</span>
                 </h2>
                 <div className="mt-1.5 w-12 border border-primary transition-all duration-500"></div>
                 <div className="my-6"></div>
@@ -290,13 +307,13 @@ const DubaiVisaPage: React.FC = () => {
                   <div className="group relative cursor-pointer">
                     <p className="text-sm text-gray-500">Length of Stay</p>
                     <p className="mt-0.5 text-base font-semibold text-gray-800 underline">
-                      30 days
+                      14 days
                     </p>
 
                     {/* Tooltip */}
                     <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-xl border bg-white p-4 text-sm text-gray-700 shadow-xl group-hover:flex flex-col group-hover:block z-10">
                       <span className="pb-2 font-medium">
-                        Length of Stay: <strong>30 days</strong>
+                        Length of Stay: <strong>14 days</strong>
                       </span>
                       <span>
                         The maximum duration that you are allowed to remain in a country after
@@ -347,13 +364,13 @@ const DubaiVisaPage: React.FC = () => {
                   <div className="group relative cursor-pointer">
                     <p className="text-sm text-gray-500">Validity</p>
                     <p className="mt-0.5 text-base font-semibold text-gray-800 underline">
-                      60 days
+                      30 days
                     </p>
 
                     {/* Tooltip */}
                     <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-xl border bg-white p-4 text-sm text-gray-700 shadow-xl group-hover:flex flex-col group-hover:block z-10">
                       <span className="pb-2 font-medium">
-                        Validity Period: <strong>60 days</strong>
+                        Validity Period: <strong>30 days</strong>
                       </span>
                       <span>
                         The number of days your visa is active after the date of issuance. We
@@ -462,7 +479,7 @@ const DubaiVisaPage: React.FC = () => {
                 {/* ====== Heading ====== */}
                 <div>
                   <h2 className="text-lg font-semibold lg:text-2xl">
-                    <span>Dubai Visa Requirements</span>
+                    <span>Singapore Visa Requirements</span>
                   </h2>
                   <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
                 </div>
@@ -506,7 +523,7 @@ const DubaiVisaPage: React.FC = () => {
              
 
               <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 justify-items-center">
-                {[iata, god, mofa, ey].map((logo, index) => (
+                {[iata, govt, mti,mtii, ].map((logo, index) => (
                   <div
                     key={index}
                     className="border rounded-xl p-6 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-all duration-200"
@@ -527,7 +544,7 @@ const DubaiVisaPage: React.FC = () => {
             <div className="mb-4">
               <div>
                 <h2 className="text-lg font-semibold lg:text-2xl">
-                  <span>All 7 Emirates with 1 Visa</span>
+                  <span>All 7 Thai Wonders with 1 Visa</span>
                 </h2>
                 <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
               
@@ -539,18 +556,18 @@ const DubaiVisaPage: React.FC = () => {
                     style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
                   >
                     <img
-                      alt="dubai"
+                      alt="Singapore"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="31.67vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
+                      srcSet= {tthai}
+                      src= {tthai}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Dubai</h3>
+                      <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Singapore</h3>
                     </div>
                   </div>
 
@@ -560,18 +577,19 @@ const DubaiVisaPage: React.FC = () => {
                       style={{ height: "min(25vw, 240px)" }}
                     >
                       <img
-                        alt="abu-dhabi"
+                        alt="Bangkok"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
+                        srcSet= {bangkok}
+                        src = {bangkok}
+
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Abu Dhabi</h3>
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Bangkok</h3>
                       </div>
                     </div>
 
@@ -580,18 +598,18 @@ const DubaiVisaPage: React.FC = () => {
                       style={{ height: "min(25vw, 240px)" }}
                     >
                       <img
-                        alt="sharjah"
+                        alt="Phuket"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
+                        srcSet= {phuket}
+                        src = {phuket}
                         style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Sharjah</h3>
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Phuket</h3>
                       </div>
                     </div>
                   </div>
@@ -600,74 +618,75 @@ const DubaiVisaPage: React.FC = () => {
                 <div className="grid grid-cols-4 gap-2 md:gap-4">
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="ras-al-khaimah"
+                      alt="Koh Samui"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
+                      srcSet= {kosomui}
+                      src= {kosomui}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ras Al Khaimah</h3>
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Koh Samui</h3>
                     </div>
                   </div>
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="fujairah"
+                      alt="Krabi"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
+                      srcSet= {krabi}
+                      src= {krabi}
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Fujairah</h3>
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Krabi</h3>
                     </div>
                   </div>
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="umm-al-quwain"
+                      alt="Udon Thani"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
+                      srcSet={udonThani}
+                      src={udonThani} 
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Umm Al Quwain</h3>
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Udon Thani</h3>
                     </div>
                   </div>
 
                   <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                     <img
-                      alt="ajman"
+                      alt="Khon Kaen"
                       loading="lazy"
                       decoding="async"
                       data-nimg="fill"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                       sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
+                      srcSet={khonKaen}
+                      src={khonKaen}
+                      
                       style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ajman</h3>
+                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Khon Kaen</h3>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>Partners We Work With
+            </div>
             </div>
 
             <div className="my-6">
@@ -682,11 +701,15 @@ const DubaiVisaPage: React.FC = () => {
           </div>
           {/* Right Column - Price */}
           <div className="bg-transparent rounded-xl  p-1 my-8">
-            <Price />
-
+            <PriceBreakdown
+              destination="Dubai"
+              govtFee={1}
+              aeroFee={1000}
+              aeroFeeDiscounted={99}
+            />
             <div className="space-y-4 bg-white rounded-xl shadow-md p-6 mt-6">
               <h2 className="text-lg font-semibold lg:text-2xl">
-                <span>How Dubai Visa Process Works.</span>
+                <span>How Singapore Visa Process Works.</span>
               </h2>
               <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
 
@@ -861,5 +884,5 @@ const DubaiVisaPage: React.FC = () => {
   );
 };
 
-export default DubaiVisaPage;
+export default SingaporeVisaPage;
 

@@ -16,10 +16,10 @@ const staggerContainer = {
 
 export function About() {
   return (
-    <div className="relative w-full min-h-screen font-sans overflow-hidden">
+    <div className="pt-28 relative w-full min-h-screen font-sans overflow-hidden">
       {/* Hero Section */}
       <div
-        className="relative h-[400px] sm:h-[500px] bg-cover bg-center flex items-center justify-center"
+        className="relative h-[450px] sm:h-[650px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${about})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>

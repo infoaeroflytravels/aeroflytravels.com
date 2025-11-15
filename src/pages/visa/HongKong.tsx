@@ -1,22 +1,40 @@
 import React, { useState, useEffect } from "react";
+const TG = "https://media.atlys.com/b2c/clp/country-landing-page-videos/HK.mp4?tr=f-webm";
 
-import AE from "@/assets/visa/assets/AE/ae.webm";
-import alt from "@/assets/visa/assets/AE/alt.webp";
-import iata from "@/assets/visa/logo/iatalogo.avif";
-import god from "@/assets/visa/assets/AE/god.webp";
-import mofa from "@/assets/visa/assets/AE/mofa.webp";
-import ey from "@/assets/visa/assets/AE/ethihad.webp";
+const iata = "https://images.prismic.io/atlys/d5504196-40e8-41ba-a58d-768ccab8807d_iata.png?auto=compress,format&rect=0,0,356,240&w=356&h=240";
+const govt = "https://images.prismic.io/atlys/fac32838-c156-4d78-ad35-289a493d6757_Hong+Kong+Tourism+Board.png?auto=compress,format"
+const mtii = "https://images.prismic.io/atlys/521818cc-4dd0-4c9d-9331-128b767ea230_Hong_Kong_Airlines_Logo.png?auto=compress,format";
+import mti from "@/assets/visa/logo/mti.svg";
+const tthai = "https://images.prismicea0-38e8-4e29-85e1-dba77e6447ab_image+%285%29.png?auto=compress,format";
+const xyz = "https://images.prismic.io/atlys/0d38ce80-0a52-460e-aa34-f9c72fa7a762_Hong+Kong+ministry+of+foreign+affairs..png?auto=compress,format";
 
-import Price from "@/components/pricebreakdown";
-import Calendarr from "@/components/visacalender";
+import krabi from "@/assets/visa/assets/TH/5krabi.webp";
+import udonThani from "@/assets/visa/assets/TH/6udonthani.jpg";
+import khonKaen from "@/assets/visa/assets/TH/khonkhen.jpg";
+import phuket from "@/assets/visa/assets/TH/2phuket.jpeg";
+import bangkok from "@/assets/visa/assets/TH/3bangkok.webp";
+import kosomui from "@/assets/visa/assets/TH/4kosomui.webp";
+
+
+
+
+
+
+const alt = "https://media.atlys.com/b2c/clp/country-landing-page/tr:w-1024,h-683,q-60,f-avif/HK/fall/default";
+
+
+
+
 
 import Guaranteed from "@/components/visatimeline";
 import "react-calendar/dist/Calendar.css";
+import PriceBreakdown from "@/components/pricebreakdown";
 
 
 
 
-const DubaiVisaPage: React.FC = () => {
+
+function HongKongVisaPage() {
   const [selectedProfile, setSelectedProfile] = useState("Employed");
 
   const [country, setCountry] = useState<string>("Your Country");
@@ -50,7 +68,7 @@ const DubaiVisaPage: React.FC = () => {
 
   // Profiles & required documents
   const profiles = ["Employed", "Self-Employed", "Student", "Retired"];
-  const requiredDocs: { [key: string]: string[] } = {
+  const requiredDocs: { [key: string]: string[]; } = {
     Employed: ["Passport", "Employment Letter", "Bank Statement"],
     "Self-Employed": ["Passport", "Business Registration", "Bank Statement"],
     Student: ["Passport", "Student ID", "Bank Statement"],
@@ -76,14 +94,14 @@ const DubaiVisaPage: React.FC = () => {
             poster={alt}
             className="w-full h-[600px] object-cover"
           >
-            <source src={AE} type="video/webm" />
-            <img src={alt} alt="AE" className="w-full h-[750px] object-cover" />
+            <source src={TG} type="video/webm" />
+            <img src={alt} alt="TG" className="w-full h-[750px] object-cover" />
           </video>
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
             <h1 className="text-5xl font-bold text-white mb-4">
-              Dubai Visa
+              Hong Kong Visa (PAR) for Indians
             </h1>
 
             {/* ✅ Guarantee Pill with random minutes */}
@@ -94,11 +112,10 @@ const DubaiVisaPage: React.FC = () => {
                 width="28"
                 height="28"
                 src="https://media.atlys.com/b2c/clp/Assets/shield-icon.svg"
-                className="text-green-400"
-              />
+                className="text-green-400" />
 
               <span className="flex flex-row items-center  text-white text-md">
-                Visa guaranteed in 3 days  
+                Visa guaranteed in 30 minutes
               </span>
             </div>
 
@@ -133,7 +150,7 @@ const DubaiVisaPage: React.FC = () => {
                   <rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#FBFBFB" stroke-linecap="round" stroke-dasharray="4 4"></rect>
                   <path d="M15 23.4636C15 23.4636 21.3709 20.2782 21.3709 15.5V9.1291L15 7.53638L8.62909 9.1291V15.5C8.62909 20.2782 15 23.4636 15 23.4636Z" fill="white" fill-opacity="0.22" stroke="#5057EA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                   <path d="M13.2598 15.0896L14.6631 16.4931L17.6484 13.5078" stroke="#5057EA" stroke-width="2" stroke-linecap="round"></path>
-                </svg>Aerofly is authorized by the Government of Dubai</div></div>
+                </svg>Aerofly is authorized by the Government of Hong Kong</div></div>
 
             {/* Badge */}
             <div className="flex w-full flex-row items-center bg-white gap-4 rounded-2xl  shadow-xl border p-4 md:gap-3">
@@ -145,8 +162,7 @@ const DubaiVisaPage: React.FC = () => {
                   width={35}
                   height={50}
                   className="-mr-2.5 translate-y-1.5"
-                  src="https://media.atlys.com/b2c/clp/Assets/leaves.svg"
-                />
+                  src="https://media.atlys.com/b2c/clp/Assets/leaves.svg" />
                 <p className="text-2xl font-semibold">4.7</p>
                 <img
                   alt="leaves"
@@ -154,8 +170,7 @@ const DubaiVisaPage: React.FC = () => {
                   width={35}
                   height={50}
                   className="-ml-2.5 translate-y-1.5 scale-x-[-1]"
-                  src="https://media.atlys.com/b2c/clp/Assets/leaves.svg"
-                />
+                  src="https://media.atlys.com/b2c/clp/Assets/leaves.svg" />
               </div>
 
 
@@ -173,8 +188,7 @@ const DubaiVisaPage: React.FC = () => {
                     loading="lazy"
                     width={16}
                     height={16}
-                    src="https://media.atlys.com/b2c/clp/Assets/crown.svg"
-                  />
+                    src="https://media.atlys.com/b2c/clp/Assets/crown.svg" />
                   <p className="italic">moms,</p>
 
                   <img
@@ -182,8 +196,7 @@ const DubaiVisaPage: React.FC = () => {
                     loading="lazy"
                     width={14}
                     height={13}
-                    src="https://media.atlys.com/b2c/clp/Assets/heart.svg"
-                  />
+                    src="https://media.atlys.com/b2c/clp/Assets/heart.svg" />
                   <p className="italic">newlyweds, and</p>
 
                   <img
@@ -191,8 +204,7 @@ const DubaiVisaPage: React.FC = () => {
                     loading="lazy"
                     width={14}
                     height={14}
-                    src="https://media.atlys.com/b2c/clp/Assets/clock.svg"
-                  />
+                    src="https://media.atlys.com/b2c/clp/Assets/clock.svg" />
                   <p className="italic">last-minute planners</p>
                 </div>
               </div>
@@ -203,7 +215,7 @@ const DubaiVisaPage: React.FC = () => {
             <div className="bg-white   p-6  gap-2 rounded-2xl  shadow-xl border">
               <div>
                 <h2 className="text-lg font-semibold lg:text-3xl">
-                  <span> Dubai Visa Information</span>
+                  <span> Hong Kong Visa Information</span>
                 </h2>
                 <div className="mt-1.5 w-12 border border-primary transition-all duration-500"></div>
                 <div className="my-6"></div>
@@ -226,14 +238,12 @@ const DubaiVisaPage: React.FC = () => {
                         width="16.5825"
                         height="24.0098"
                         rx="3.87639"
-                        fill="#5057EA"
-                      />
+                        fill="#5057EA" />
                       <path
                         d="M5.32617 2.27539H11.7124"
                         stroke="#E5EFFF"
                         strokeWidth="0.969097"
-                        strokeLinecap="round"
-                      />
+                        strokeLinecap="round" />
                       <circle cx="8.51911" cy="21.6812" r="0.870673" fill="#E5EFFF" />
                       <rect
                         x="2.45508"
@@ -241,8 +251,7 @@ const DubaiVisaPage: React.FC = () => {
                         width="12.1293"
                         height="13.8172"
                         rx="1.93819"
-                        fill="#E5EFFF"
-                      />
+                        fill="#E5EFFF" />
                     </svg>
                   </div>
 
@@ -270,8 +279,7 @@ const DubaiVisaPage: React.FC = () => {
                           fillRule="evenodd"
                           clipRule="evenodd"
                           d="M7.74196 1.48832C7.74196 1.13018 7.45163 0.839844 7.09349 0.839844C6.73534 0.839844 6.44501 1.13018 6.44501 1.48832V1.75818C5.45464 1.82185 4.74683 1.96203 4.14118 2.27062C3.16503 2.76799 2.3714 3.56163 1.87403 4.53777C1.30859 5.6475 1.30859 7.10022 1.30859 10.0057V11.9944C1.30859 14.8998 1.30859 16.3525 1.87403 17.4623C2.3714 18.4384 3.16503 19.232 4.14118 19.7294C5.25091 20.2948 6.70363 20.2948 9.60906 20.2948H11.4327C14.3381 20.2948 15.7908 20.2948 16.9006 19.7294C17.8767 19.232 18.6703 18.4384 19.1677 17.4623C19.7332 16.3525 19.7332 14.8998 19.7332 11.9944V10.0057C19.7332 7.10022 19.7332 5.6475 19.1677 4.53777C18.6703 3.56163 17.8767 2.76799 16.9006 2.27062C16.2951 1.96212 15.5875 1.82194 14.5976 1.75824V1.48832C14.5976 1.13018 14.3073 0.839844 13.9491 0.839844C13.591 0.839844 13.3007 1.13018 13.3007 1.48832V1.71317C12.7524 1.70519 12.135 1.70519 11.4327 1.70519H9.60906C8.90712 1.70519 8.28997 1.70519 7.74196 1.71316V1.48832ZM5.15891 7.54145C5.15891 7.18331 5.44924 6.89298 5.80738 6.89298H15.2339C15.592 6.89298 15.8824 7.18331 15.8824 7.54145C15.8824 7.8996 15.592 8.18993 15.2339 8.18993H5.80738C5.44924 8.18993 5.15891 7.8996 5.15891 7.54145ZM5.58739 11.4323C5.58739 10.8409 6.06411 10.3515 6.66434 10.3515C7.26456 10.3515 7.74129 10.8409 7.74129 11.4323C7.74129 12.0238 7.26456 12.5131 6.66434 12.5131C6.06411 12.5131 5.58739 12.0238 5.58739 11.4323ZM9.44369 11.4323C9.44369 10.8409 9.92042 10.3515 10.5206 10.3515C11.1209 10.3515 11.5976 10.8409 11.5976 11.4323C11.5976 12.0238 11.1209 12.5131 10.5206 12.5131C9.92042 12.5131 9.44369 12.0238 9.44369 11.4323ZM13.3 11.4323C13.3 10.8409 13.7767 10.3515 14.3769 10.3515C14.9772 10.3515 15.4539 10.8409 15.4539 11.4323C15.4539 12.0238 14.9772 12.5131 14.3769 12.5131C13.7767 12.5131 13.3 12.0238 13.3 11.4323ZM5.58739 14.8909C5.58739 14.2994 6.06411 13.8101 6.66434 13.8101C7.26456 13.8101 7.74129 14.2994 7.74129 14.8909C7.74129 15.4823 7.26456 15.9716 6.66434 15.9716C6.06411 15.9716 5.58739 15.4823 5.58739 14.8909ZM9.44369 14.8909C9.44369 14.2994 9.92042 13.8101 10.5206 13.8101C11.1209 13.8101 11.5976 14.2994 11.5976 14.8909C11.5976 15.4823 11.1209 15.9716 10.5206 15.9716C9.92042 15.9716 9.44369 15.4823 9.44369 14.8909ZM13.3 14.8909C13.3 14.2994 13.7767 13.8101 14.3769 13.8101C14.9772 13.8101 15.4539 14.2994 15.4539 14.8909C15.4539 15.4823 14.9772 15.9716 14.3769 15.9716C13.7767 15.9716 13.3 15.4823 13.3 14.8909Z"
-                          fill="#009DFF"
-                        />
+                          fill="#009DFF" />
                       </g>
                       <defs>
                         <clipPath id="clip0_37706_1950">
@@ -279,8 +287,7 @@ const DubaiVisaPage: React.FC = () => {
                             width="20.5669"
                             height="20.7512"
                             fill="white"
-                            transform="translate(0.236328 0.625)"
-                          />
+                            transform="translate(0.236328 0.625)" />
                         </clipPath>
                       </defs>
                     </svg>
@@ -290,13 +297,13 @@ const DubaiVisaPage: React.FC = () => {
                   <div className="group relative cursor-pointer">
                     <p className="text-sm text-gray-500">Length of Stay</p>
                     <p className="mt-0.5 text-base font-semibold text-gray-800 underline">
-                      30 days
+                      14 days
                     </p>
 
                     {/* Tooltip */}
                     <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-xl border bg-white p-4 text-sm text-gray-700 shadow-xl group-hover:flex flex-col group-hover:block z-10">
                       <span className="pb-2 font-medium">
-                        Length of Stay: <strong>30 days</strong>
+                        Length of Stay: <strong>14 days</strong>
                       </span>
                       <span>
                         The maximum duration that you are allowed to remain in a country after
@@ -321,14 +328,12 @@ const DubaiVisaPage: React.FC = () => {
                       <g clipPath="url(#clip0_39491_51042)">
                         <path
                           d="M8.37565 1.58012C8.37565 1.22197 8.6634 0.931641 9.01836 0.931641H12.4462C12.8012 0.931641 13.0889 1.22197 13.0889 1.58012C13.0889 1.93826 12.8012 2.22859 12.4462 2.22859H9.01836C8.6634 2.22859 8.37565 1.93826 8.37565 1.58012Z"
-                          fill="#12B76A"
-                        />
+                          fill="#12B76A" />
                         <path
                           fillRule="evenodd"
                           clipRule="evenodd"
                           d="M10.7323 3.52555C6.11776 3.52555 2.37695 7.29987 2.37695 11.9557C2.37695 16.6116 6.11776 20.3859 10.7323 20.3859C15.3468 20.3859 19.0876 16.6116 19.0876 11.9557C19.0876 9.86148 18.33 7.94474 17.0774 6.4708L18.4709 5.06488C18.7219 4.81164 18.7219 4.40104 18.4709 4.1478C18.2199 3.89455 17.8129 3.89455 17.5619 4.1478L16.1685 5.55372C14.7077 4.2899 12.8079 3.52555 10.7323 3.52555ZM11.375 9.36183C11.375 9.00369 11.0872 8.71336 10.7323 8.71336C10.3773 8.71336 10.0896 9.00369 10.0896 9.36183V12.8204C10.0896 13.1785 10.3773 13.4689 10.7323 13.4689C11.0872 13.4689 11.375 13.1785 11.375 12.8204V9.36183Z"
-                          fill="#12B76A"
-                        />
+                          fill="#12B76A" />
                       </g>
                       <defs>
                         <clipPath id="clip0_39491_51042">
@@ -336,8 +341,7 @@ const DubaiVisaPage: React.FC = () => {
                             width="20.5669"
                             height="20.7512"
                             fill="white"
-                            transform="translate(0.449219 0.714844)"
-                          />
+                            transform="translate(0.449219 0.714844)" />
                         </clipPath>
                       </defs>
                     </svg>
@@ -347,13 +351,13 @@ const DubaiVisaPage: React.FC = () => {
                   <div className="group relative cursor-pointer">
                     <p className="text-sm text-gray-500">Validity</p>
                     <p className="mt-0.5 text-base font-semibold text-gray-800 underline">
-                      60 days
+                      180 days
                     </p>
 
                     {/* Tooltip */}
                     <div className="absolute left-0 top-full mt-2 hidden w-60 rounded-xl border bg-white p-4 text-sm text-gray-700 shadow-xl group-hover:flex flex-col group-hover:block z-10">
                       <span className="pb-2 font-medium">
-                        Validity Period: <strong>60 days</strong>
+                        Validity Period: <strong>180 days</strong>
                       </span>
                       <span>
                         The number of days your visa is active after the date of issuance. We
@@ -398,12 +402,12 @@ const DubaiVisaPage: React.FC = () => {
                   <div className="group relative cursor-pointer pl-3">
                     <p className="text-xs md:text-sm text-gray-500">Entry:</p>
                     <p className="mt-0.5 whitespace-nowrap text-sm font-medium underline text-gray-800">
-                      Single
+                      Multiple
                     </p>
 
                     {/* Tooltip */}
                     <div className="invisible absolute top-full z-10 mt-2 w-60 flex-col rounded-xl border bg-white p-4 shadow-xl group-hover:visible group-hover:flex lg:left-1/2 lg:-translate-x-1/2 right-0">
-                      <span className="pb-2 font-medium">Entry: Single</span>
+                      <span className="pb-2 font-medium">Entry: Multiple</span>
                       <span className="text-sm text-gray-600">
                         You can enter the country only once during the visa's validity period and cannot re-enter using the same visa once you've exited.
                       </span>
@@ -462,7 +466,7 @@ const DubaiVisaPage: React.FC = () => {
                 {/* ====== Heading ====== */}
                 <div>
                   <h2 className="text-lg font-semibold lg:text-2xl">
-                    <span>Dubai Visa Requirements</span>
+                    <span>Hong Kong Visa Requirements</span>
                   </h2>
                   <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
                 </div>
@@ -486,8 +490,7 @@ const DubaiVisaPage: React.FC = () => {
                         stroke="#2F384C"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        strokeWidth="1.5"
-                      />
+                        strokeWidth="1.5" />
                     </svg>
                     <span>Passport</span>
                   </div>
@@ -498,15 +501,15 @@ const DubaiVisaPage: React.FC = () => {
             {/* Partners */}
             <div className="bg-white   p-6 rounded-2xl  shadow-xl border">
               <div>
-                  <h2 className="text-lg font-semibold lg:text-2xl">
-                    <span>Partners We Work With</span>
-                  </h2>
-                  <div className="mt-2.5 w-12 border border-primary transition-all duration-500 my-4"></div>
-                </div>
-             
+                <h2 className="text-lg font-semibold lg:text-2xl">
+                  <span>Partners We Work With</span>
+                </h2>
+                <div className="mt-2.5 w-12 border border-primary transition-all duration-500 my-4"></div>
+              </div>
+
 
               <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 justify-items-center">
-                {[iata, god, mofa, ey].map((logo, index) => (
+                {[iata, govt, mtii, mti].map((logo, index) => (
                   <div
                     key={index}
                     className="border rounded-xl p-6 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-all duration-200"
@@ -514,8 +517,7 @@ const DubaiVisaPage: React.FC = () => {
                     <img
                       src={logo}
                       alt={`Partner ${index + 1}`}
-                      className="h-14 md:h-20 object-contain"
-                    />
+                      className="h-14 md:h-20 object-contain" />
                   </div>
                 ))}
 
@@ -527,151 +529,146 @@ const DubaiVisaPage: React.FC = () => {
             <div className="mb-4">
               <div>
                 <h2 className="text-lg font-semibold lg:text-2xl">
-                  <span>All 7 Emirates with 1 Visa</span>
+                  <span>All 7 Thai Wonders with 1 Visa</span>
                 </h2>
                 <div className="mt-2.5 w-0 border w-12 border-primary transition-all duration-500"></div>
-              
 
-              <div className="flex flex-col gap-1 md:gap-4 mt-4">
-                <div className="grid grid-cols-12 gap-1 ">
-                  <div
-                    className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                    style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
-                  >
-                    <img
-                      alt="dubai"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="31.67vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fdubai.png%3FupdatedAt%3D1736947434479&w=828&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Dubai</h3>
-                    </div>
-                  </div>
 
-                  <div className="col-span-7 grid grid-cols-2 gap-1 md:gap-4">
+                <div className="flex flex-col gap-1 md:gap-4 mt-4">
+                  <div className="grid grid-cols-12 gap-1 ">
                     <div
-                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                      style={{ height: "min(25vw, 240px)" }}
+                      className="group relative col-span-5 cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                      style={{ height: "min(20vw, 240px)", width: "min(35vw, 330px)" }}
                     >
                       <img
-                        alt="abu-dhabi"
+                        alt="Hong Kong"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fabu-dhabi.png%3FupdatedAt%3D1736947437328&w=640&q=75"
-                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                      />
+                        sizes="31.67vw"
+                        srcSet={khonKaen}
+                        src={khonKaen}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Abu Dhabi</h3>
+                        <h3 className="absolute bottom-4 left-4 text-sm font-semibold text-white sm:text-xl lg:text-2xl">Hong Kong</h3>
                       </div>
                     </div>
 
-                    <div
-                      className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
-                      style={{ height: "min(25vw, 240px)" }}
-                    >
+                    <div className="col-span-7 grid grid-cols-2 gap-1 md:gap-4">
+                      <div
+                        className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                        style={{ height: "min(25vw, 240px)" }}
+                      >
+                        <img
+                          alt="Bangkok"
+                          loading="lazy"
+                          decoding="async"
+                          data-nimg="fill"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="29.17vw"
+                          srcSet={bangkok}
+                          src={bangkok}
+
+                          style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                          <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Bangkok</h3>
+                        </div>
+                      </div>
+
+                      <div
+                        className="group relative cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg"
+                        style={{ height: "min(25vw, 240px)" }}
+                      >
+                        <img
+                          alt="Phuket"
+                          loading="lazy"
+                          decoding="async"
+                          data-nimg="fill"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="29.17vw"
+                          srcSet={phuket}
+                          src={phuket}
+                          style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                          <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Phuket</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-4 gap-2 md:gap-4">
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
                       <img
-                        alt="sharjah"
+                        alt="Koh Samui"
                         loading="lazy"
                         decoding="async"
                         data-nimg="fill"
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="29.17vw"
-                        srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                        src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fsarjhah.png%3FupdatedAt%3D1736947435922&w=640&q=75"
-                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                      />
+                        sizes="25vw"
+                        srcSet={kosomui}
+                        src={kosomui}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-lg lg:text-xl">Sharjah</h3>
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Koh Samui</h3>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-4 gap-2 md:gap-4">
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="ras-al-khaimah"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fras-al-khaimah.png%3FupdatedAt%3D1736947436577&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ras Al Khaimah</h3>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Krabi"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={krabi}
+                        src={krabi}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Krabi</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="fujairah"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Ffujairah.png%3FupdatedAt%3D1736947433925&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Fujairah</h3>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Udon Thani"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={udonThani}
+                        src={udonThani}
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Udon Thani</h3>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="umm-al-quwain"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fumm-al-quwain.png%3FupdatedAt%3D1736947434268&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Umm Al Quwain</h3>
-                    </div>
-                  </div>
+                    <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
+                      <img
+                        alt="Khon Kaen"
+                        loading="lazy"
+                        decoding="async"
+                        data-nimg="fill"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="25vw"
+                        srcSet={khonKaen}
+                        src={khonKaen}
 
-                  <div className="group relative aspect-[5/7] cursor-pointer overflow-hidden rounded-xl transition-shadow duration-300 hover:shadow-lg">
-                    <img
-                      alt="ajman"
-                      loading="lazy"
-                      decoding="async"
-                      data-nimg="fill"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="25vw"
-                      srcSet="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      src="https://www.atlys.com/_next/image?url=https%3A%2F%2Fmedia.atlys.com%2Fb2c%2Fclp%2FImages%2FCountry%2520At%2520Glance%2Fajman.png%3FupdatedAt%3D1736947435000&w=640&q=75"
-                      style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
-                      <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Ajman</h3>
+                        style={{ position: "absolute", height: "100%", width: "100%", inset: 0, color: "transparent" }} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent">
+                        <h3 className="absolute bottom-4 left-4 text-xs font-semibold text-white sm:text-base lg:text-lg">Khon Kaen</h3>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>Partners We Work With
             </div>
 
             <div className="my-6">
-              
+
 
 
 
@@ -682,11 +679,14 @@ const DubaiVisaPage: React.FC = () => {
           </div>
           {/* Right Column - Price */}
           <div className="bg-transparent rounded-xl  p-1 my-8">
-            <Price />
-
+            <PriceBreakdown
+              destination="Hong Kong"
+              govtFee={1}
+              aeroFee={999}
+              aeroFeeDiscounted={499} />
             <div className="space-y-4 bg-white rounded-xl shadow-md p-6 mt-6">
               <h2 className="text-lg font-semibold lg:text-2xl">
-                <span>How Dubai Visa Process Works.</span>
+                <span>How Hong Kong Visa Process Works.</span>
               </h2>
               <div className="mt-2.5 w-12 border border-primary transition-all duration-500"></div>
 
@@ -810,7 +810,6 @@ const DubaiVisaPage: React.FC = () => {
                         const formattedDate = visaDate.toLocaleDateString("en-GB", options);
 
                         // Format time → "05:34 PM"
-
                         return (
                           <span className="bg-gradient-to-r from-primary to-[#53BCFF] bg-clip-text font-bold text-transparent">
                             {`${formattedDate}`}
@@ -855,11 +854,10 @@ const DubaiVisaPage: React.FC = () => {
 
 
           </div>
-        </section >
-      </div >
-    </div >
+        </section>
+      </div>
+    </div>
   );
-};
+}
 
-export default DubaiVisaPage;
-
+export default HongKongVisaPage;
